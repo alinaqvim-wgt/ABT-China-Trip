@@ -209,6 +209,24 @@ nav button.on .ni{transform:translateY(-1px)}
 .tiny{font-size:11.5px;color:var(--muted)}
 .pending{color:var(--amber);font-style:italic}
 .hidden{display:none!important}
+.disc{margin-top:12px}
+.disc .who{display:flex;align-items:center;gap:7px;font-family:'Space Grotesk';font-weight:600;font-size:13px;margin:14px 0 7px}
+.disc .who .tag{font-family:'Space Mono';font-size:9.5px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:3px 8px;border-radius:20px}
+.disc .who.mirza .tag{background:#e9f0f4;color:var(--slate)}
+.disc .who.greek .tag{background:#eee9f2;color:var(--violet)}
+.disc .who.qual .tag{background:#fbe7e2;color:var(--cinnabar)}
+.qitem{display:flex;gap:9px;padding:8px 0;border-top:1px solid var(--line);font-size:13px;line-height:1.45}
+.qitem:first-of-type{border-top:none}
+.qitem .qn{flex-shrink:0;font-family:'Space Mono';font-size:11px;font-weight:700;color:var(--muted);margin-top:1px}
+.prodlist{display:flex;flex-wrap:wrap;gap:6px;margin-top:8px}
+.prodlist .p{font-size:11.5px;font-weight:500;background:#f0ede4;color:var(--ink);padding:4px 9px;border-radius:8px}
+.disc-links{display:flex;flex-direction:column;gap:6px;margin-top:8px}
+.disc-links a{font-size:12.5px;color:#1f5fa8;text-decoration:none;display:flex;align-items:center;gap:6px;padding:8px 10px;background:#e9f0f7;border-radius:9px;border:1px solid #cfe0f0}
+.disc-note{font-size:12.5px;background:#fbf1dc;color:#7a5a10;padding:9px 11px;border-radius:9px;margin-top:8px;border:1px solid #eddcae}
+.sheetbtn{display:inline-flex;align-items:center;gap:6px;font-size:11px;font-weight:600;color:#eaf1f4;
+  background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.18);padding:5px 10px;border-radius:20px;text-decoration:none;white-space:nowrap}
+.sheetbtn:active{background:rgba(255,255,255,.2)}
+
 .infocard{margin-bottom:12px}
 .infocard h3{font-size:16px;margin-bottom:2px;display:flex;align-items:center;gap:8px}
 .chk{display:flex;gap:9px;padding:9px 0;border-top:1px solid var(--line);font-size:13.5px;align-items:flex-start}
@@ -222,6 +240,7 @@ nav button.on .ni{transform:translateY(-1px)}
  <div class="wrap">
   <div class="hrow">
     <div class="brand"><span class="dot"></span> China Factory Trip</div>
+    <a class="sheetbtn" id="sheetLink" href="#" target="_blank">▦ China Trip Google Sheet</a>
     <div class="clock"><b id="cnTime">—</b><span id="cnDate">China Standard Time</span></div>
   </div>
   <div class="hmeta">
@@ -470,6 +489,90 @@ const HOTELS = {
 // map each day to its hotel key
 const DAYHOTEL={1:"wyndham",2:"crowne",3:"andaz",4:"andaz",5:"meridien",6:"suning",7:"suning",8:"suning",9:"hampton",10:"home2",11:"bjhotel",12:null};
 
+
+/* ============ DISCUSSION POINTS (from Mirza & Greek) ============ */
+const SHEET_URL="https://docs.google.com/spreadsheets/d/1j1CwdpPGxl1EFxYtrqzrC3OAWGTfeBe8/edit?gid=1215416576#gid=1215416576";
+
+/* keyed by factory id (matches FACTORIES keys) */
+const DISCUSS = {
+  naturalife:{
+    company:"Xiamen Naturalife Industry Co. Ltd (Bakerydeco)",
+    products:["Gingerbread House"],
+    order:"5000+",
+    mirza:["Why can't we sell in Australia when we have our own private label? (Supplier didn't allow shipping to Australia, citing terms with another buyer.)"],
+    greek:["Can you give an estimate of how many companies have sourced your products for 3+ years, and from which countries?"],
+    quality:["Confirm restrictions and regional/country guidelines — avoids any packaging revisions later."]
+  },
+  olivee:{
+    company:"Oliveg International Group (Xiamen Office)",
+    products:["Pimple Patches (NDC)"],
+    order:"",
+    mirza:["Their hydrocolloid type and how it differs from others on the market."],
+    greek:["With your current hydrocolloid formulation, how often do you update/improve it — or is it by client request only?"],
+    quality:[]
+  },
+  carelife:{
+    company:"Shanghai Carelife International Trading Co., Ltd.",
+    products:["Pen Needles","Insulin Syringes","Poki Syringes"],
+    order:"",
+    mirza:[],
+    greek:[],
+    quality:[]
+  },
+  bamboo:{
+    company:"Shanghai Bamboo Crafts Tool Co., Ltd",
+    products:["Hospital Bed Mattress"],
+    order:"",
+    mirza:[],
+    greek:[],
+    quality:[]
+  },
+  meson:{
+    company:"Jiaxing Meson Medical Materials Co., Ltd.",
+    products:["Pimple Patches (variety pack)","Long Large Patches","Adhesive Remover Wipes","Scar Tapes","Wound Dressing & Wound Closure Kits","Silicone Foam Dressing"],
+    order:"",
+    mirza:["Their hydrocolloid type and how it differs from others on the market."],
+    greek:["With your current hydrocolloid formulation, how often do you update/improve it — or is it by client request only?"],
+    quality:["Stickiness issue for hydrocolloid, and lacks consistency between batches."]
+  },
+  jsun:{
+    company:"Nanjing J Sun Healthcare Co., Ltd",
+    products:["Pimple Patches — Salicylic Acid / Acne Patches"],
+    order:"",
+    mirza:["Their hydrocolloid type and how it differs from others on the market."],
+    greek:["With your current hydrocolloid formulation, how often do you update/improve it — or is it by client request only?"],
+    quality:[]
+  },
+  bjny:{
+    company:"Beijing NY Import & Export Co., Limited",
+    products:["Pimple Patches (B0FDBKS3BY)"],
+    order:"",
+    mirza:["Their hydrocolloid type and how it differs from others on the market."],
+    greek:["With your current hydrocolloid formulation, how often do you update/improve it — or is it by client request only?"],
+    quality:[]
+  },
+  jiadun:{
+    company:"Hengshui Jiadun Medical Equipment Co. Ltd",
+    products:["Electric Hospital Bed"],
+    order:"TBA",
+    note:"Anthony — read the ClickUp analysis first (overview of numbers + key discussion points).",
+    links:[
+      {label:"ClickUp — analysis & discussion",url:"https://app.clickup.com/t/1240162/868f7f3za?comment=90110254851260"},
+      {label:"ClickUp — FDA / min-qty context",url:"https://app.clickup.com/t/1240162/868f7f3za?comment=90110254856552"}
+    ],
+    mirza:[
+      "How can we pack in one piece (not a crate) to lower weight? If not, how much price reduction on the crate? (Currently quoted $55 for crate packaging.)",
+      "Their requirement for a minimum yearly order quantity to renew the FDA certification — clarify the numbers (see ClickUp link)."
+    ],
+    greek:[
+      "If we agree to the quantity terms, can we get payment terms of up to 4 installments?",
+      "What are the typical issues with the 5F / 3F models, and how are they resolved?",
+      "If we work with you on the FDA requirements, will you give an exclusivity agreement (only our company sells these in the US / the Amazon regions we offer)?"
+    ],
+    quality:[]
+  },
+};
+
 /* ============ HELPERS ============ */
 const $=s=>document.querySelector(s);
 const el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;};
@@ -565,6 +668,8 @@ function renderToday(){
       <div class="irow"><div class="k">Discuss</div><div class="v">${f.discuss}</div></div>
       ${contactActions(f.contact,true)}`;
     v.appendChild(fc);
+    const db=discussBlock(d.factory);
+    if(db){v.appendChild(el("div","slab","Ask on this visit"));v.appendChild(db);}
   }
   const hk=DAYHOTEL[d.id];
   if(hk&&HOTELS[hk]){
@@ -592,6 +697,30 @@ function stepDay(n){selIdx=Math.max(0,Math.min(DAYS.length-1,selIdx+n));renderTo
 function goToday(){selIdx=activeDayIdx();switchView("today");renderToday();updHeader();window.scrollTo(0,0);}
 function updTodayBtn(){$("#todayBtn").classList.toggle("show",selIdx!==activeDayIdx());}
 
+
+
+/* ============ DISCUSSION BLOCK ============ */
+function discussBlock(fid){
+  const q=DISCUSS[fid];if(!q)return null;
+  const c=el("div","card pad disc");
+  let h=`<div class="eyebrow">Discussion points · what to ask</div>
+    <div style="font-family:'Space Grotesk';font-weight:600;font-size:15px;margin-top:6px">${q.company}</div>`;
+  if(q.products&&q.products.length)h+=`<div class="prodlist">${q.products.map(p=>`<span class="p">${p}</span>`).join("")}</div>`;
+  if(q.order)h+=`<div class="tiny" style="margin-top:8px">Current order: <b>${q.order}</b></div>`;
+  if(q.note)h+=`<div class="disc-note">📋 ${q.note}</div>`;
+  if(q.links&&q.links.length)h+=`<div class="disc-links">${q.links.map(l=>`<a href="${l.url}" target="_blank">🔗 ${l.label}</a>`).join("")}</div>`;
+  const grp=(items,cls,tag)=>{
+    if(!items||!items.length)return"";
+    return `<div class="who ${cls}"><span class="tag">${tag}</span></div>`+
+      items.map((t,i)=>`<div class="qitem"><span class="qn">${i+1}</span><span>${t}</span></div>`).join("");
+  };
+  h+=grp(q.mirza,"mirza","Mirza asks");
+  h+=grp(q.greek,"greek","Greek asks");
+  h+=grp(q.quality,"qual","Quality concerns");
+  if((!q.mirza||!q.mirza.length)&&(!q.greek||!q.greek.length)&&(!q.quality||!q.quality.length))
+    h+=`<div class="tiny" style="margin-top:10px">No specific questions flagged for this supplier yet.</div>`;
+  c.innerHTML=h;return c;
+}
 
 /* ============ HOTEL CARD (full booking record) ============ */
 function hotelCard(h){
@@ -679,6 +808,20 @@ function renderFac(){
   const box=el("div","fgrid");box.id="facBox";v.appendChild(box);
   drawFac("");
 }
+
+function discussSummary(fid){
+  const q=DISCUSS[fid];if(!q)return"";
+  const total=(q.mirza?.length||0)+(q.greek?.length||0)+(q.quality?.length||0);
+  if(!total&&!(q.products&&q.products.length))return"";
+  let h='<div style="margin-top:12px;border-top:1px solid var(--line);padding-top:11px">';
+  h+='<div class="eyebrow">To discuss</div>';
+  if(q.products&&q.products.length)h+=`<div class="prodlist">${q.products.map(p=>`<span class="p">${p}</span>`).join("")}</div>`;
+  const grp=(items,cls,tag)=>items&&items.length?`<div class="who ${cls}"><span class="tag">${tag}</span></div>`+items.map((t,i)=>`<div class="qitem"><span class="qn">${i+1}</span><span>${t}</span></div>`).join(""):"";
+  h+='<div class="disc">'+grp(q.mirza,"mirza","Mirza")+grp(q.greek,"greek","Greek")+grp(q.quality,"qual","Quality")+'</div>';
+  if(q.links&&q.links.length)h+=`<div class="disc-links">${q.links.map(l=>`<a href="${l.url}" target="_blank">🔗 ${l.label}</a>`).join("")}</div>`;
+  h+='</div>';return h;
+}
+
 function drawFac(q){
   const box=$("#facBox");box.innerHTML="";
   Object.entries(FACTORIES).forEach(([id,f])=>{
@@ -700,7 +843,9 @@ function drawFac(q){
         <a class="act-btn wa" target="_blank" href="https://wa.me/${c.wa}">WhatsApp</a>
         <a class="act-btn call" href="tel:${c.phone.replace(/\s/g,'')}">Call</a>
         <button class="act-btn" onclick="copy('${esc(addr)}')">Copy address</button>
-      </div></div>`;
+      </div>
+      ${discussSummary(id)}
+      </div>`;
     box.appendChild(card);
   });
   if(!box.children.length)box.innerHTML='<p class="tiny" style="padding:20px;text-align:center">No factories match that search.</p>';
@@ -887,6 +1032,7 @@ document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{
 });
 
 /* ============ INIT ============ */
+const sl=document.getElementById("sheetLink");if(sl)sl.href=SHEET_URL;
 tickClock();setInterval(tickClock,1000*20);
 updHeader();renderToday();
 window.addEventListener("scroll",updTodayBtn);
