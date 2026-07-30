@@ -24,7 +24,6 @@ button{font-family:inherit;cursor:pointer;border:none;background:none;color:inhe
 a{color:inherit}
 .wrap{max-width:900px;margin:0 auto}
 
-/* Header */
 header{position:sticky;top:0;z-index:1000;background:var(--ink);color:#eaf1f4;
   padding:calc(env(safe-area-inset-top) + 12px) 16px 12px;box-shadow:0 2px 12px rgba(0,0,0,.15)}
 .hrow{display:flex;align-items:center;justify-content:space-between;gap:12px}
@@ -40,7 +39,6 @@ header{position:sticky;top:0;z-index:1000;background:var(--ink);color:#eaf1f4;
 .prog{height:4px;background:rgba(255,255,255,.12);border-radius:4px;margin-top:11px;overflow:hidden}
 .prog>i{display:block;height:100%;background:linear-gradient(90deg,var(--cinnabar),#e0764f);border-radius:4px;transition:width .4s}
 
-/* Views */
 main{padding:16px 14px 30px}
 .view{display:none;animation:fade .28s ease}
 .view.on{display:block}
@@ -49,12 +47,10 @@ main{padding:16px 14px 30px}
 .vhead h2{font-size:22px;font-weight:700}
 .vhead .sub{font-size:12px;color:var(--muted)}
 
-/* Cards */
 .card{background:var(--card);border:1px solid var(--line);border-radius:var(--r);box-shadow:var(--shadow)}
 .pad{padding:16px}
 .eyebrow{font-family:'Space Mono';font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 
-/* Hero (Today) */
 .hero{background:linear-gradient(160deg,var(--ink),var(--ink2));color:#eef4f6;border:none;overflow:hidden;position:relative}
 .hero .pad{padding:18px}
 .hero .date{display:flex;align-items:baseline;gap:8px}
@@ -67,7 +63,6 @@ main{padding:16px 14px 30px}
 .hero .kath{position:absolute;top:14px;right:14px;font-size:10px;font-family:'Space Mono';background:rgba(200,68,46,.16);
   color:#f0b6a8;padding:4px 8px;border-radius:20px;border:1px solid rgba(200,68,46,.3)}
 
-/* Status badges */
 .badge{display:inline-flex;align-items:center;gap:5px;font-family:'Space Mono';font-size:10.5px;font-weight:700;
   letter-spacing:.03em;text-transform:uppercase;padding:4px 9px;border-radius:20px;white-space:nowrap}
 .b-confirmed{background:#e6f2ec;color:var(--jade)}
@@ -75,16 +70,16 @@ main{padding:16px 14px 30px}
 .b-travel{background:#e9f0f4;color:var(--slate)}
 .b-rest{background:#eee9f2;color:var(--violet)}
 .b-heavy{background:#fbe7e2;color:var(--cinnabar)}
+.b-booked{background:#e6f2ec;color:var(--jade)}
+.b-pending{background:#fbf1dc;color:var(--amber)}
 .dotb{width:7px;height:7px;border-radius:50%;background:currentColor}
 
-/* Segmented control */
 .seg{display:flex;gap:6px;overflow-x:auto;padding:2px 2px 8px;scrollbar-width:none}
 .seg::-webkit-scrollbar{display:none}
 .seg button{white-space:nowrap;font-size:12.5px;font-weight:600;color:var(--muted);background:#fff;
   border:1px solid var(--line);padding:7px 13px;border-radius:20px}
 .seg button.on{background:var(--ink);color:#fff;border-color:var(--ink)}
 
-/* Day nav */
 .daynav{display:flex;align-items:center;gap:8px;margin-bottom:12px}
 .daynav button{width:40px;height:40px;border-radius:12px;background:#fff;border:1px solid var(--line);
   font-size:18px;color:var(--ink);display:flex;align-items:center;justify-content:center;box-shadow:var(--shadow)}
@@ -95,7 +90,6 @@ main{padding:16px 14px 30px}
   padding:10px 15px;border-radius:24px;box-shadow:0 6px 20px -6px rgba(200,68,46,.6);display:none;align-items:center;gap:6px}
 .today-btn.show{display:flex}
 
-/* Plan timeline (chronological steps) */
 .steps{margin-top:6px}
 .step{display:flex;gap:12px;padding:10px 0;position:relative}
 .step:not(:last-child)::before{content:'';position:absolute;left:15px;top:34px;bottom:-10px;width:2px;background:var(--line)}
@@ -110,14 +104,13 @@ main{padding:16px 14px 30px}
 .step .what{font-size:14px;font-weight:500;margin-top:1px}
 .step .det{font-size:12.5px;color:var(--muted);margin-top:2px;white-space:pre-line}
 
-/* Info rows */
 .irow{display:flex;gap:10px;padding:11px 0;border-top:1px solid var(--line)}
 .irow:first-child{border-top:none}
 .irow .k{font-family:'Space Mono';font-size:10px;letter-spacing:.06em;text-transform:uppercase;color:var(--muted);width:74px;flex-shrink:0;padding-top:2px}
 .irow .v{flex:1;font-size:13.5px;white-space:pre-line}
 .irow .v small{color:var(--muted)}
+.irow .v .conf{font-family:'Space Mono';font-size:12px;background:#f0ede4;padding:2px 6px;border-radius:5px;letter-spacing:.02em}
 
-/* Action buttons */
 .acts{display:flex;flex-wrap:wrap;gap:8px;margin-top:12px}
 .act-btn{display:inline-flex;align-items:center;gap:6px;font-size:12.5px;font-weight:600;
   padding:8px 12px;border-radius:11px;border:1px solid var(--line);background:#fff}
@@ -126,10 +119,8 @@ main{padding:16px 14px 30px}
 .act-btn.call{background:#e9f0f7;color:#1f5fa8;border-color:#cfe0f0}
 .act-btn:active{transform:scale(.97)}
 
-/* Section label */
 .slab{font-family:'Space Mono';font-size:10.5px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:22px 4px 9px}
 
-/* Trip rail spine */
 .rail{position:relative;padding-left:8px}
 .rday{position:relative;padding:0 0 14px 46px}
 .rday::before{content:'';position:absolute;left:19px;top:6px;bottom:-8px;width:3px;background:var(--line)}
@@ -155,7 +146,6 @@ main{padding:16px 14px 30px}
 .rday.open .rdetail{display:block}
 .rday.open .rsum .exp{color:var(--cinnabar)}
 
-/* Factory cards */
 .fgrid{display:grid;gap:12px}
 @media(min-width:640px){.fgrid{grid-template-columns:1fr 1fr}}
 .fcard .pad{padding:15px}
@@ -166,7 +156,6 @@ main{padding:16px 14px 30px}
   padding:3px 9px;border-radius:8px;margin-top:9px}
 .fcard .who{font-size:13px;margin-top:10px;display:flex;align-items:center;gap:6px}
 
-/* Contacts */
 .clist{display:flex;flex-direction:column;gap:10px}
 .crow{display:flex;align-items:center;gap:12px;padding:13px 14px}
 .crow .av{width:42px;height:42px;border-radius:12px;background:var(--ink);color:#fff;flex-shrink:0;
@@ -180,7 +169,6 @@ main{padding:16px 14px 30px}
 .iconbtn.wa{background:#e7f5ec;border-color:#c6e8d3}
 .iconbtn.call{background:#e9f0f7;border-color:#cfe0f0}
 
-/* Alerts */
 .alert{display:flex;gap:11px;padding:13px 14px;border-radius:13px;border:1px solid;margin-bottom:9px;align-items:flex-start}
 .alert .ai{font-size:16px;flex-shrink:0;margin-top:1px}
 .alert .at{font-size:13px}
@@ -195,12 +183,10 @@ main{padding:16px 14px 30px}
 .al-note .ai{color:var(--muted)}
 .alert .jump{font-family:'Space Mono';font-size:10px;color:var(--muted);letter-spacing:.05em;margin-top:5px}
 
-/* Search */
 .search{width:100%;padding:12px 14px;border-radius:13px;border:1px solid var(--line);background:#fff;
   font-size:14px;font-family:inherit;margin-bottom:14px;box-shadow:var(--shadow)}
 .search:focus{outline:2px solid var(--slate);outline-offset:1px}
 
-/* Map */
 #map{height:60vh;min-height:380px;border-radius:var(--r);border:1px solid var(--line);box-shadow:var(--shadow);z-index:1}
 .mapnote{font-size:11.5px;color:var(--muted);text-align:center;margin-top:8px;padding:0 8px}
 .leaflet-popup-content{margin:12px 14px;font-family:Inter,sans-serif}
@@ -212,7 +198,6 @@ main{padding:16px 14px 30px}
   border-radius:50% 50% 50% 4px;transform:rotate(45deg);box-shadow:0 2px 6px rgba(0,0,0,.3);font-family:'Space Mono'}
 .mkr span{transform:rotate(-45deg)}
 
-/* Bottom nav */
 nav{position:fixed;left:0;right:0;bottom:0;z-index:1000;background:rgba(255,255,255,.94);
   backdrop-filter:blur(12px);border-top:1px solid var(--line);
   padding:8px 6px calc(8px + env(safe-area-inset-bottom));display:flex;justify-content:space-around}
@@ -224,6 +209,12 @@ nav button.on .ni{transform:translateY(-1px)}
 .tiny{font-size:11.5px;color:var(--muted)}
 .pending{color:var(--amber);font-style:italic}
 .hidden{display:none!important}
+.infocard{margin-bottom:12px}
+.infocard h3{font-size:16px;margin-bottom:2px;display:flex;align-items:center;gap:8px}
+.chk{display:flex;gap:9px;padding:9px 0;border-top:1px solid var(--line);font-size:13.5px;align-items:flex-start}
+.chk:first-of-type{border-top:none}
+.chk .cx{flex-shrink:0;margin-top:1px}
+.chk.done{color:var(--muted)}
 </style>
 </head>
 <body>
@@ -249,10 +240,10 @@ nav button.on .ni{transform:translateY(-1px)}
     <div class="seg" id="mapViews"></div>
     <div class="seg" id="mapFilters" style="padding-top:0"></div>
     <div id="map"></div>
-    <p class="mapnote" id="mapNote">Numbered pins follow the trip in sequence. The dashed line is the trip route, not exact rail/road navigation — tap a pin, then “Open in Maps” for turn-by-turn.</p>
+    <p class="mapnote" id="mapNote">Numbered pins follow the trip in sequence. The dashed line is the trip route, not exact rail/road navigation — tap a pin, then "Open in Maps" for directions.</p>
   </section>
   <section id="v-fac" class="view"></section>
-  <section id="v-con" class="view"></section>
+  <section id="v-info" class="view"></section>
 </main>
 
 <button class="today-btn" id="todayBtn" onclick="goToday()">◉ Today</button>
@@ -262,145 +253,235 @@ nav button.on .ni{transform:translateY(-1px)}
   <button data-v="trip"><span class="ni">▤</span>Trip</button>
   <button data-v="map"><span class="ni">◈</span>Map</button>
   <button data-v="fac"><span class="ni">⌂</span>Factories</button>
-  <button data-v="con"><span class="ni">☏</span>Contacts</button>
+  <button data-v="info"><span class="ni">☏</span>Info</button>
 </nav>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.js"></script>
 <script>
-/* ============ DATA (from workbook: China-Factory-Trip-draft_4.xlsx) ============ */
+/* ============ LOCATIONS ============ */
 const LOC = {
   danang:{n:"Da Nang",t:"city",city:"Da Nang, Vietnam",ll:[16.0472,108.2068],acc:"city center"},
-  xmn:{n:"Xiamen Gaoqi Airport (XMN)",t:"air",city:"Xiamen",ll:[24.544,118.127],acc:"approximate"},
-  xiamen:{n:"Xiamen",t:"city",city:"Xiamen, Fujian",ll:[24.4798,118.0894],acc:"city center"},
-  quanzhou:{n:"Naturalife Factory",t:"fac",city:"Quanzhou, Fujian",ll:[24.943,118.679],acc:"approximate area",addr:"18 Gaoxin St, Guantou Community, Wan'an Sub-Dist, Luojiang District, Quanzhou"},
-  ganzhou:{n:"Olivee Cosmetics Factory",t:"fac",city:"Ganzhou, Jiangxi",ll:[25.86,115.01],acc:"approximate area",addr:"No. 11 Huoju Road, Ganxian District, Ganzhou City, Jiangxi"},
-  ganxianN:{n:"Ganxian North Station",t:"rail",city:"Ganzhou",ll:[25.90,115.00],acc:"approximate"},
-  kow:{n:"Ganzhou Huangjin Airport (KOW)",t:"air",city:"Ganzhou",ll:[25.851,114.778],acc:"approximate"},
-  shanghai:{n:"Shanghai",t:"city",city:"Shanghai",ll:[31.2304,121.4737],acc:"city center"},
-  pvg:{n:"Shanghai Pudong Airport (PVG)",t:"air",city:"Shanghai",ll:[31.1443,121.8083],acc:"approximate"},
-  caremed:{n:"Carelife — Pen Needle Factory",t:"fac",city:"Hangzhou Bay New Area (Cixi), Ningbo",ll:[30.29,121.23],acc:"approximate area",addr:"Ningbo Caremed Medical Products — No 79 Jiutang Rd (south side), Hangzhou Bay New Zone, Ningbo 315336"},
-  wenzhou:{n:"Carelife — Insulin Syringe Factory",t:"fac",city:"Wenzhou, Zhejiang",ll:[27.91,120.83],acc:"approximate area",addr:"Zhejiang INI Medical Devices — No 251 Jifeng Rd, Yongzhong Sub-Dist, Longwan District, Wenzhou 325024"},
-  shaoxing:{n:"Bamboo Crafts Factory",t:"fac",city:"Shaoxing, Zhejiang",ll:[30.05,120.63],acc:"approximate area",addr:"No. 331 Yinqiao Road, Gaobu Town, Yuecheng District, Shaoxing"},
-  shaoxingN:{n:"Shaoxing North Station",t:"rail",city:"Shaoxing",ll:[30.06,120.502],acc:"approximate"},
-  nanjing:{n:"J Sun Healthcare Factory",t:"fac",city:"Nanjing, Jiangsu",ll:[32.15,118.92],acc:"approximate area",addr:"No. 1 Sanjiangkou Industrial Park, Jing'an, Qixia District, Nanjing"},
-  nanjingSt:{n:"Nanjing Station",t:"rail",city:"Nanjing",ll:[32.091,118.803],acc:"approximate"},
-  yizheng:{n:"Meson Medical Factory",t:"fac",city:"Yizheng / Yangzhou, Jiangsu",ll:[32.27,119.18],acc:"approximate area",addr:"No. 3 Jingxiu Road, Yizheng Economic Development Zone, Yizheng 211400"},
-  zhenjiangS:{n:"Zhenjiang South Station",t:"rail",city:"Zhenjiang",ll:[32.13,119.42],acc:"approximate"},
-  tianjin:{n:"Beijing NY — Tianjin Facility",t:"fac",city:"Tianjin (Jinnan)",ll:[38.90,117.30],acc:"approximate area",addr:"Area A, No.8 Gaoying Rd, Beizhakou Town, Jinnan Dist, Tianjin"},
-  tianjinSt:{n:"Tianjin HSR Station",t:"rail",city:"Tianjin",ll:[39.135,117.207],acc:"approximate"},
-  beijing:{n:"Beijing",t:"city",city:"Beijing",ll:[39.9042,116.4074],acc:"city center"},
-  hengshui:{n:"Jiadun Medical Factory",t:"fac",city:"Hengshui, Hebei",ll:[37.56,115.57],acc:"approximate area",addr:"3-3, North Dist, No.999 Kaiyuan Rd, Jizhou Dist, Hengshui"},
-  hengshuiSt:{n:"Hengshui Station",t:"rail",city:"Hengshui",ll:[37.735,115.70],acc:"approximate"},
+  hanoi:{n:"Hanoi (HAN) — connection",t:"air",city:"Hanoi, Vietnam",ll:[21.2212,105.8072],acc:"airport"},
+  xmn:{n:"Xiamen Gaoqi Airport (XMN)",t:"air",city:"Xiamen",ll:[24.544,118.127],acc:"airport"},
+  xiamen:{n:"Wyndham Grand Plaza Royale — Xiamen",t:"hotel",city:"Xiamen, Fujian",ll:[24.5233,118.1683],acc:"Wuyuan Bay",addr:"No.882 Zhongzhai Rd, Huli District, Xiamen 361015"},
+  quanzhou:{n:"Naturalife Factory",t:"fac",city:"Quanzhou, Fujian",ll:[24.943,118.679],acc:"Luojiang District",addr:"18 Gaoxin St, Guantou Community, Wan'an Sub-Dist, Luojiang District, Quanzhou"},
+  quanzhouSt:{n:"Quanzhou Railway Station",t:"rail",city:"Quanzhou",ll:[24.918,118.606],acc:"station"},
+  ganzhou:{n:"Olivee Cosmetics Factory",t:"fac",city:"Ganzhou, Jiangxi",ll:[25.86,115.01],acc:"Ganxian District",addr:"No.11 Huoju Road, Ganxian District, Ganzhou, Jiangxi"},
+  ganzhouHotel:{n:"Crowne Plaza Ganzhou Qili Ancient Town",t:"hotel",city:"Ganzhou",ll:[25.86,115.02],acc:"Qili Ancient Town",addr:"188 Qiandong Avenue, Shuidong Town, Zhanggong District, Ganzhou"},
+  ganzhouSt:{n:"Ganzhou Station",t:"rail",city:"Ganzhou",ll:[25.815,114.93],acc:"D6575 arrival"},
+  kow:{n:"Ganzhou Huangjin Airport (KOW)",t:"air",city:"Ganzhou",ll:[25.851,114.778],acc:"airport"},
+  shanghai:{n:"Andaz Xintiandi — Shanghai",t:"hotel",city:"Shanghai",ll:[31.2201,121.4753],acc:"Xintiandi",addr:"No.88 Songshan Road, Huangpu District, Shanghai 200021"},
+  sha:{n:"Shanghai Hongqiao (SHA) T2",t:"air",city:"Shanghai",ll:[31.1979,121.3363],acc:"airport"},
+  pvg:{n:"Shanghai Pudong (PVG) T1",t:"air",city:"Shanghai",ll:[31.1443,121.8083],acc:"Kathleen's departure"},
+  caremed:{n:"Carelife — Pen Needle Factory",t:"fac",city:"Hangzhou Bay New Area (Cixi), Ningbo",ll:[30.29,121.23],acc:"Hangzhou Bay",addr:"Ningbo Caremed Medical Products — No.79 Jiutang Rd (south side), Hangzhou Bay New Area, Ningbo 315336"},
+  shaoxing:{n:"Bamboo Crafts Factory",t:"fac",city:"Shaoxing, Zhejiang",ll:[30.05,120.63],acc:"Gaobu Town",addr:"No.331 Yinqiao Road, Gaobu Town, Yuecheng District, Shaoxing"},
+  shaoxingHotel:{n:"Le Meridien Shaoxing Yukun",t:"hotel",city:"Shaoxing",ll:[30.03,120.62],acc:"Gaobu Town",addr:"No.688 Yinxing Rd, Gaobu Town, Yuecheng District, Shaoxing"},
+  shaoxingN:{n:"Shaoxing North Station",t:"rail",city:"Shaoxing",ll:[30.06,120.502],acc:"G7482 departure"},
+  nanjing:{n:"J Sun Healthcare Factory",t:"fac",city:"Nanjing, Jiangsu",ll:[32.15,118.92],acc:"Qixia District",addr:"No.1 Sanjiangkou Industrial Park, Jing'an, Qixia District, Nanjing"},
+  nanjingHotel:{n:"Suning Zhongshan Golf Resort — Nanjing",t:"hotel",city:"Nanjing",ll:[32.078,118.85],acc:"Xuanwu District",addr:"No.9 Huanling Road, Xuanwu District, Nanjing"},
+  nanjingS:{n:"Nanjing South Station",t:"rail",city:"Nanjing",ll:[31.968,118.797],acc:"G7482 arr / G802 dep"},
+  yizheng:{n:"Meson Medical Factory",t:"fac",city:"Yizheng, Jiangsu",ll:[32.27,119.18],acc:"Yizheng EDZ",addr:"No.3 Jingxiu Road, Yizheng Economic Development Zone, Yizheng 211400"},
+  tianjin:{n:"Beijing NY — Tianjin Facility",t:"fac",city:"Tianjin (Jinnan)",ll:[38.90,117.30],acc:"Jinnan District",addr:"Area A, No.8 Gaoying Rd, Beizhakou Town, Jinnan District, Tianjin"},
+  tianjinHotel:{n:"Hampton by Hilton — Tianjin Jinnan",t:"hotel",city:"Tianjin",ll:[38.98,117.38],acc:"Haihe Education Park",addr:"Building 47, Jincaiyuan, Yarun Rd × Jinnan Ring Rd, Xianshuigu Town, Jinnan District, Tianjin"},
+  tianjinSt:{n:"Tianjin Station",t:"rail",city:"Tianjin",ll:[39.135,117.207],acc:"G802 arrival"},
+  fiveAve:{n:"Five Grand Avenues / Porcelain House",t:"city",city:"Tianjin city centre",ll:[39.114,117.20],acc:"sightseeing + handoff"},
+  hengshui:{n:"Jiadun Medical Factory",t:"fac",city:"Hengshui, Hebei",ll:[37.56,115.57],acc:"Jizhou District",addr:"3-3 North District, No.999 Kaiyuan Rd, Jizhou District, Hengshui, Hebei"},
+  hengshuiHotel:{n:"Home2 Suites by Hilton — Hengshui Taocheng",t:"hotel",city:"Hengshui",ll:[37.735,115.68],acc:"Taocheng District",addr:"Building S5, No.1308 Yucai South Street, Taocheng District, Hengshui, Hebei"},
+  beijing:{n:"Beijing",t:"city",city:"Beijing",ll:[39.9042,116.4074],acc:"hotel to be booked"},
 };
 
+/* ============ CONTACTS ============ */
 const CONTACTS = {
-  ivy:{name:"Ivy Yi",role:"Sales Rep",co:"Xiamen Naturalife Industry (Bakerydeco)",phone:"+86 19859199834",wa:"8619859199834",email:"sales22@naturalifecn.com",product:"Gingerbread House"},
-  frances:{name:"Frances",role:"Sales",co:"Ganzhou Olivee Cosmetics / Oliveg Intl",phone:"+86 18158418901",wa:"8618158418901",tel:"0592-6205955",email:"oliveg21@oliveg.com.cn",product:"Pimple Patches (NDC)"},
-  qian:{name:"Qian Li / Cathy Yan",role:"Sales",co:"Shanghai Carelife Intl Trading",phone:"+86 13667018891",wa:"8613667018891",tel:"+86 21 58542656",email:"lyyan@shanghaicarelife.com",product:"Pen Needles & Insulin Syringes"},
+  ivy:{name:"Ivy Yi",role:"Sales (+ Lina, Bella, Vicky)",co:"Xiamen Naturalife (Bakerydeco)",phone:"+86 19859199834",wa:"8619859199834",email:"sales22@naturalifecn.com",product:"Gingerbread House"},
+  frances:{name:"Frances",role:"Sales · Olivee Intl",co:"Ganzhou Olivee Cosmetics",phone:"+86 18158418901",wa:"8618158418901",email:"oliveg21@oliveg.com.cn",product:"Pimple Patches (NDC)"},
+  qian:{name:"Qian Li / Cathy Yan",role:"Sales",co:"Shanghai Carelife",phone:"+86 13667018891",wa:"8613667018891",email:"lyyan@shanghaicarelife.com",product:"Pen Needles & Insulin Syringes"},
   alice:{name:"Alice Zhang",role:"Sales",co:"Shanghai Bamboo Crafts Tool",phone:"+86 18621076445",wa:"8618621076445",email:"alice@bamboocrafts.com.cn",product:"Hospital Bed Mattress"},
-  eva:{name:"Eva Song",role:"Sales",co:"Jiaxing Meson Medical Materials",phone:"+86 15868103064",wa:"8615868103064",email:"evasmerson@163.com",product:"Pimple Patches"},
-  shirley:{name:"Shirley Gu",role:"Sales",co:"Nanjing J Sun Healthcare",phone:"+86 15850584826",wa:"8615850584826",tel:"+86-25-83419690",email:"shirleygu@jsunmedical.com",product:"Salicylic Acid / Acne Patches & Adhesive Remover Wipes"},
-  julie:{name:"Julie Chen",role:"Export Dept",co:"Beijing NY Import & Export",phone:"+86 13264590665",wa:"8613264590665",email:"info@nybeautyhealth.com",product:"Pimple Patches"},
-  jayda:{name:"Jayda Wang",role:"Sales Manager",co:"Hengshui Jiadun Medical Equipment",phone:"+86 17832683238",wa:"8617832683238",email:"jayda@jiadunyiliao.cn",product:"Electric Hospital Bed"},
+  eva:{name:"Eva Song",role:"Sales",co:"Meson Medical (Yizheng)",phone:"+86 15868103064",wa:"8615868103064",email:"evasmerson@163.com",product:"Pimple Patches"},
+  shirley:{name:"Shirley Gu",role:"Sales",co:"Nanjing J Sun Healthcare",phone:"+86 15850584826",wa:"8615850584826",email:"shirleygu@jsunmedical.com",product:"Acne / Salicylic Patches"},
+  julie:{name:"Julie Chen (CJ)",role:"Export",co:"Beijing NY Import & Export",phone:"+86 13264590665",wa:"8613264590665",email:"info@nybeautyhealth.com",product:"Pimple Patches"},
+  jayda:{name:"Jayda Wang",role:"Sales Manager",co:"Hengshui Jiadun Medical",phone:"+86 17832683238",wa:"8617832683238",email:"jayda@jiadunyiliao.cn",product:"Electric Hospital Bed"},
 };
 
+/* ============ FACTORIES ============ */
 const FACTORIES = {
-  naturalife:{co:"Xiamen Naturalife Industry",disp:"Naturalife (Bakerydeco)",date:"Aug 3",contact:"ivy",product:"Gingerbread House",city:"Quanzhou, Fujian",status:"confirmed",loc:"quanzhou",
-    office:"Sales ctr: No.99 Channel Pearl Plaza, Yilan Rd, Siming Dist, Xiamen",
-    hotel:"Ivy to arrange (pending flight info)",car:"Ivy arranges pickup/drop (pending flight info)",rail:"Quanzhou — station TBC",
-    remarks:"Confirmed Aug 3; Quanzhou factory confirmed. Needs ABT's flight details (arrival/departure) to finalize hotel + car.",discuss:"Production process, quality control, cooperation"},
-  olivee:{co:"Ganzhou Olivee Cosmetics",disp:"Olivee (Oliveg Intl)",date:"Aug 4",contact:"frances",product:"Pimple Patches (NDC)",city:"Ganzhou, Jiangxi",status:"confirmed",loc:"ganzhou",
-    office:"15/F Bldg C10, Software Park Ph III, Jimei Dist, Xiamen 361022",
-    hotel:"Ganzhou hotel — pending",car:"Olivee arranges private car from arrival station",rail:"Ganxian North (~15 min, nearest) or Ganzhou West (~40 min, more direct from Quanzhou)",
-    remarks:"Ganzhou factory visit agreed; awaiting her detailed plan & ABT's flight info. Holding Aug 1 & Aug 4 — Aug 4 confirmed our end.",discuss:"Pimple patch (NDC) line, QC, capacity, cooperation"},
-  carelife:{co:"Shanghai Carelife Intl Trading",disp:"Carelife",date:"Aug 6",contact:"qian",product:"Pen Needles & Insulin Syringes",city:"Hangzhou Bay (Ningbo) + Wenzhou",status:"confirm",loc:"caremed",
-    office:"#1707 Yinqiao Bldg, No.58 Jinxin Rd, Pudong 201206, Shanghai",
-    hotel:"Not needed — based in Shanghai (Aug 4–7). Hyatt Regency Ningbo Hangzhou Bay if overnighting",car:"Carelife provides car / pickup",rail:"Dep: Ningbo Rwy / Shaoxing North",
-    remarks:"Confirmed Aug 6. Pen-needle factory in Hangzhou Bay New Area (Cixi), ~1.5–2h from Shanghai. ⚠ Insulin-syringe factory is in WENZHOU, ~270 km / 3–3.5h away — separate site, cannot combine same day. Qian offered a separate Wenzhou visit (Aug 7) if wanted. Headcount → 1 from today.",discuss:"Pen needle & insulin syringe lines, QC, expansion"},
+  naturalife:{co:"Xiamen Naturalife",disp:"Naturalife",date:"Aug 3",contact:"ivy",product:"Gingerbread House",city:"Quanzhou, Fujian",status:"confirmed",loc:"quanzhou",
+    hotel:"Crowne Plaza Ganzhou (that night)",car:"Ivy's private car — 8:30 AM pickup from Wyndham Xiamen → factory → Quanzhou Station",rail:"D6575 Quanzhou 15:44 → Ganzhou 19:39 (booked)",
+    remarks:"Team of 4 hosting (Ivy, Lina, Bella, Vicky). 2 guests. SUV/MPV for luggage. No heavy dairy at lunch.",discuss:"Gingerbread house line, packaging, QC, cooperation"},
+  olivee:{co:"Ganzhou Olivee Cosmetics",disp:"Olivee",date:"Aug 4",contact:"frances",product:"Pimple Patches (NDC)",city:"Ganzhou, Jiangxi",status:"confirmed",loc:"ganzhou",
+    hotel:"Crowne Plaza Ganzhou Qili Ancient Town (conf 164940)",car:"Olivee car — all day → drop at KOW airport by 8:00 PM",rail:"—",
+    remarks:"Frances + boss greet him at Ganzhou Station off the train. 2 guests, SUV. Front-desk pay ¥500. No heavy dairy.",discuss:"Pimple patch (NDC) line, QC, capacity, cooperation"},
+  carelife:{co:"Shanghai Carelife",disp:"Carelife",date:"Aug 6",contact:"qian",product:"Pen Needles",city:"Hangzhou Bay (Ningbo)",status:"confirmed",loc:"caremed",
+    hotel:"Le Meridien Shaoxing (that night)",car:"Qian's car — 9:00 AM from Andaz → drop Kathleen at PVG → factory → Le Meridien Shaoxing",rail:"—",
+    remarks:"Kathleen flies home today (PVG 1:10 PM). ABT solo after. Insulin-syringe factory (Wenzhou, ~270km) deferred to October.",discuss:"Pen needle line, QC; insulin syringes = October priority"},
   bamboo:{co:"Shanghai Bamboo Crafts Tool",disp:"Bamboo Crafts",date:"Aug 7",contact:"alice",product:"Hospital Bed Mattress",city:"Shaoxing, Zhejiang",status:"confirmed",loc:"shaoxing",
-    office:"No.99 Fengpu Ave, Fengxian Dist, Shanghai 201401 (registered office)",
-    hotel:"Le Meridien Shaoxing Yukun — No. 688 Yinxing Rd, Gaobu Town, Shaoxing",car:"Alice provides pickup/drop",rail:"Shaoxing North (nearest)",
-    remarks:"Confirmed; flexible Aug 6 or 7. Factory in Shaoxing (Gaobu Town), NOT the Fengxian office. 1 guest (solo from Aug 6).",discuss:"Mattress line, QC, cooperation"},
-  meson:{co:"Jiaxing Meson Medical Materials",disp:"Meson Medical",date:"Aug 8",contact:"eva",product:"Pimple Patches",city:"Yizheng / Yangzhou, Jiangsu",status:"confirm",loc:"yizheng",
-    office:"",hotel:"Shangri-La Yangzhou (Eva can book) — or stay Nanjing",car:"Eva provides; pickup at Zhenjiang South",rail:"Arr: Zhenjiang South (Eva car pickup)",
-    remarks:"Moved to Sat Aug 8 (uses old travel day). ⚠ Confirm Saturday production line is running. Eva flexible Aug 5 or 10. Factory Yizheng (NOT Tongxiang). Yangzhou hits ~40°C in Aug.",discuss:"Pimple patch line, full production tour, QC, future opportunities"},
-  jsun:{co:"Nanjing J Sun Healthcare",disp:"J Sun Healthcare",date:"Aug 10",contact:"shirley",product:"Salicylic Acid / Acne Patches & Adhesive Remover Wipes",city:"Nanjing, Jiangsu",status:"confirmed",loc:"nanjing",
-    office:"Rm 504, No.66 Bldg, Nanjing University Science Park, Nanjing",
-    hotel:"Shirley arranges (1 night, gym requested)",car:"Shirley picks up at Nanjing station + full local transport; accompanies",rail:"Arr: Nanjing station (Shirley pickup)",
-    remarks:"Confirmed Aug 10 (locked — won't change again). Shirley leaves China Aug 15. Offered to tour Nanjing with ABT on Aug 9. 1 guest / 1 room. Confirming whether all product lines are at this one site.",discuss:"Acne patch + adhesive-remover wipe lines, QC, cooperation"},
-  bjny:{co:"Beijing NY Import & Export",disp:"Beijing NY (Tianjin facility)",date:"Aug 11",contact:"julie",product:"Pimple Patches",city:"Tianjin (Jinnan)",status:"confirmed",loc:"tianjin",
-    office:"Room 807, No.2, Yard 26, Xueyuan North St, Fangshan Dist, Beijing",
-    hotel:"Hampton by Hilton Tianjin Jinnan (~15–20 min from facility; Julie can book)",car:"Pickup at Tianjin HSR station",rail:"Arr: Tianjin (Aug 10 late night); Dep: Tianjin → Beijing (eve Aug 11)",
-    remarks:"Flexible Aug 10–14; Aug 11 within window. Visit is the Tianjin production facility (office is 3h away in Fangshan). 1 guest / 1 room. Awaiting train times.",discuss:"Pimple patch production line, QC, cooperation"},
-  jiadun:{co:"Hengshui Jiadun Medical Equipment",disp:"Jiadun Medical",date:"Aug 12",contact:"jayda",product:"Electric Hospital Bed",city:"Hengshui, Hebei",status:"heavy",loc:"hengshui",
-    office:"Room 602, Jinyuan Building, Hengshui",
-    hotel:"3 options in Hengshui (Hilton Garden Inn / Holiday Inn Express / Atour) — gym requested. Day-trip so likely no overnight",car:"Jayda pickup from Beijing + full transport",rail:"Hengshui Station (D-train ~2h from Beijing; no direct HSR)",
-    remarks:"Flexible Aug 10–12; Aug 12 within window. ⚠ HEAVY DAY: Beijing↔Hengshui day-trip (~4h round) + flight home — needs a late-evening departure or a buffer day. 1 guest.",discuss:"Electric hospital bed line, QC, expansion"},
+    hotel:"Suning Zhongshan Golf, Nanjing (that night)",car:"Alice's car — 10:30 AM pickup from Le Meridien → factory → Shaoxing North",rail:"G7482 Shaoxing North 18:23 → Nanjing South 19:58",
+    remarks:"Sightseeing: Lu Xun Native Place & old town. 1 guest. Alice booking G7482. No heavy dairy.",discuss:"Mattress line, QC, cooperation"},
+  meson:{co:"Meson Medical",disp:"Meson Medical",date:"Aug 8",contact:"eva",product:"Pimple Patches",city:"Yizheng, Jiangsu",status:"confirmed",loc:"yizheng",
+    hotel:"Suning Zhongshan Golf, Nanjing (day-trip)",car:"Eva's car door-to-door from Nanjing hotel (~1.5h)",rail:"—",
+    remarks:"Saturday line running specially. 10:30 pickup → lunch → factory 13-16 → sightseeing → dinner → back ~21:30. ~40°C. No heavy dairy. Wipes factory (Shandong) = October.",discuss:"Pimple patch line, full production tour, QC"},
+  jsun:{co:"Nanjing J Sun Healthcare",disp:"J Sun Healthcare",date:"Aug 10",contact:"shirley",product:"Acne / Salicylic Patches",city:"Nanjing, Jiangsu",status:"confirmed",loc:"nanjing",
+    hotel:"Hampton by Hilton, Tianjin (that night)",car:"Shirley picks up at Nanjing South, accompanies, covers local transport",rail:"G802 Nanjing 17:25 → Tianjin 21:25 (Shirley booking)",
+    remarks:"Locked (she leaves China Aug 15). Sunday Aug 9 city tour. Checkout 11 AM → factory → station by 16:45. No heavy dairy.",discuss:"Acne patch line, QC, cooperation"},
+  bjny:{co:"Beijing NY Import & Export",disp:"Beijing NY",date:"Aug 11",contact:"julie",product:"Pimple Patches",city:"Tianjin (Jinnan)",status:"confirmed",loc:"tianjin",
+    hotel:"Home2 Suites, Hengshui (that night)",car:"Julie picks up at Tianjin Station (Aug 10 night) + full day Aug 11",rail:"Aug 11 eve: Jayda's car collects in Tianjin (no train)",
+    remarks:"AM facility → lunch → Five Grand Avenues & Porcelain House → 6:30–7:30 PM city centre handoff to Jayda. iOS VPN provided. No heavy dairy.",discuss:"Pimple patch line, QC, cooperation"},
+  jiadun:{co:"Hengshui Jiadun Medical",disp:"Jiadun Medical",date:"Aug 12",contact:"jayda",product:"Electric Hospital Bed",city:"Hengshui, Hebei",status:"confirmed",loc:"hengshui",
+    hotel:"Beijing (Aug 12 night — to be booked)",car:"Jayda collects in Tianjin Aug 11 eve → Hengshui overnight → factory → drive to Beijing",rail:"—",
+    remarks:"Relaxed full factory day. Then ~3–4h drive to Beijing (late arrival fine). Flies home Aug 13. No heavy dairy.",discuss:"Electric hospital bed line, QC, expansion"},
 };
 
-/* Days: chronological plan. step types: tf=transfer/rail, fl=flight, ft=factory, ht=hotel, ml=meal, rp=pickup */
+/* ============ DAYS ============ */
 const DAYS = [
- {id:1,date:"Aug 2",iso:"2026-08-02",dow:"Sunday",type:"travel",city:"Da Nang → Xiamen",next:"Xiamen",title:"Arrival & recovery",summary:"Fly Da Nang → Xiamen. No factory visit.",
-  travellers:2,checkin:"Xiamen (or Quanzhou)",checkout:"",flight:"Da Nang → Xiamen (XMN) — nearest gateway to Quanzhou (may connect via hub)",rail:"Arr: Xiamen (XMN airport)",factory:null,locs:["danang","xmn","xiamen"],
-  steps:[["fl","Morning","Fly Da Nang → Xiamen (XMN)","May connect via a hub — book with a connection buffer"],["ht","Evening","Check in — Xiamen (or Quanzhou)","Rest for Monday's factory start"]]},
- {id:2,date:"Aug 3",iso:"2026-08-03",dow:"Monday",type:"factory",city:"Quanzhou, Fujian",next:"Ganzhou",title:"Naturalife — Gingerbread House",summary:"Xiamen → Quanzhou, Naturalife factory, then evening HSR to Ganzhou.",
-  travellers:2,checkin:"Ganzhou",checkout:"Xiamen",flight:"",rail:"Arr/Dep: Quanzhou (TBC)",factory:"naturalife",locs:["xiamen","quanzhou","ganzhou"],
-  steps:[["tf","Morning","Xiamen → Quanzhou","~1 hour"],["ft","Afternoon","Naturalife factory visit & lunch","Contact: Ivy Yi"],["tf","Evening","Quanzhou → Ganzhou","~3–4h HSR"],["ht","Late night","Check in — Ganzhou",""]]},
- {id:3,date:"Aug 4",iso:"2026-08-04",dow:"Tuesday",type:"factory",city:"Ganzhou, Jiangxi",next:"Shanghai",title:"Olivee Cosmetics — Pimple Patches",summary:"Ganzhou Olivee factory, then evening flight to Shanghai.",
-  travellers:2,checkin:"Shanghai",checkout:"Ganzhou",flight:"EA suggestion: Ganzhou (KOW) → Shanghai (SHA) 9:15–10:55 PM · China Eastern, nonstop, 1h40 · SUGGESTED, not booked",rail:"Ganxian North (~15 min) or Ganzhou West (~40 min)",factory:"olivee",locs:["ganzhou","kow","shanghai"],
-  steps:[["ft","Day","Olivee Cosmetics factory visit","Contact: Frances · Olivee arranges car"],["fl","Evening","Fly Ganzhou (KOW) → Shanghai (SHA)","Suggested: 9:15–10:55 PM China Eastern"],["ht","Late night","Check in — Shanghai (after midnight)","Book Shanghai from Aug 4 night"]]},
- {id:4,date:"Aug 5",iso:"2026-08-05",dow:"Wednesday",type:"rest",city:"Shanghai",next:"Ningbo",title:"Free day — Shanghai",summary:"Rest day in Shanghai with Kathleen. No factory visit.",
-  travellers:2,checkin:"Shanghai",checkout:"",flight:"",rail:"",factory:null,locs:["shanghai"],
-  steps:[["rest","All day","Free day in Shanghai","Kathleen's last full day before flying home Aug 6"]]},
- {id:5,date:"Aug 6",iso:"2026-08-06",dow:"Thursday",type:"factory",city:"Ningbo / Hangzhou Bay",next:"Shanghai",title:"Carelife — Pen Needles",summary:"Day-trip from Shanghai to the Carelife pen-needle factory. Kathleen flies home.",
-  travellers:1,kath:true,checkin:"Shanghai",checkout:"",flight:"Kathleen: Shanghai (PVG) → home",rail:"Dep: Ningbo Rwy / Shaoxing North",factory:"carelife",locs:["shanghai","caremed","pvg"],
-  steps:[["tf","Morning","Shanghai → Hangzhou Bay New Area","~1.5–2h by car (Carelife provides)"],["fl","Morning","Kathleen flies home from Shanghai (PVG)","ABT solo from here"],["ft","Midday","Carelife pen-needle factory visit","Contact: Qian Li / Cathy Yan"],["tf","Evening","Back to Shanghai",""]]},
- {id:6,date:"Aug 7",iso:"2026-08-07",dow:"Friday",type:"factory",city:"Shaoxing, Zhejiang",next:"Nanjing",title:"Bamboo Crafts — Bed Mattress",summary:"Shanghai → Shaoxing, Bamboo Crafts factory, then evening train to Nanjing.",
-  travellers:1,checkin:"Nanjing",checkout:"Shanghai",flight:"",rail:"Shaoxing North (nearest)",factory:"bamboo",locs:["shanghai","shaoxing","nanjing"],
-  steps:[["tf","Morning","Checkout Shanghai · Shanghai → Shaoxing","~1h20 HSR"],["ft","Afternoon","Bamboo Crafts factory visit","Contact: Alice Zhang · Alice provides car"],["tf","Evening","Shaoxing → Nanjing","~2h train"],["ht","Evening","Check in — Nanjing",""]]},
- {id:7,date:"Aug 8",iso:"2026-08-08",dow:"Saturday",type:"factory",city:"Yizheng / Yangzhou",next:"Nanjing",title:"Meson Medical — Pimple Patches",summary:"Day-trip from Nanjing to Meson (Yizheng) via Zhenjiang South.",
-  travellers:1,checkin:"Nanjing",checkout:"Shanghai",flight:"",rail:"Arr: Zhenjiang South (Eva car pickup)",factory:"meson",locs:["nanjing","zhenjiangS","yizheng"],
-  steps:[["tf","Morning","Nanjing → Zhenjiang South","~30 min · Eva's car from station"],["ft","Midday","Meson factory visit","⚠ Confirm Saturday line is running · Contact: Eva Song"],["tf","Evening","Back to Nanjing",""]]},
- {id:8,date:"Aug 9",iso:"2026-08-09",dow:"Sunday",type:"rest",city:"Nanjing",next:"Nanjing",title:"Rest day — Nanjing",summary:"Rest day. Optional Nanjing city tour with Shirley.",
-  travellers:1,checkin:"Nanjing",checkout:"",flight:"",rail:"",factory:null,locs:["nanjing"],
-  steps:[["rest","All day","Rest in Nanjing","Optional tour w/ Shirley: Sun Yat-sen Mausoleum, Zhonghua Gate, Confucius Temple / Qinhuai"]]},
- {id:9,date:"Aug 10",iso:"2026-08-10",dow:"Monday",type:"factory",city:"Nanjing, Jiangsu",next:"Tianjin",title:"J Sun Healthcare — Acne Patches",summary:"J Sun factory in Nanjing, then evening HSR to Tianjin.",
-  travellers:1,checkin:"Tianjin",checkout:"Nanjing",flight:"",rail:"Arr: Nanjing station (Shirley pickup)",factory:"jsun",locs:["nanjing","tianjin"],
-  steps:[["ft","Day","J Sun Healthcare factory visit","Shirley picks up & accompanies"],["tf","Evening","Nanjing → Tianjin","~3.5–4h HSR, arrive late night"],["ht","Late night","Check in — Tianjin",""]]},
- {id:10,date:"Aug 11",iso:"2026-08-11",dow:"Tuesday",type:"factory",city:"Tianjin (Jinnan)",next:"Beijing",title:"Beijing NY — Tianjin facility",summary:"Full-day Tianjin facility visit, then evening train to Beijing.",
-  travellers:1,checkin:"Beijing",checkout:"Tianjin",flight:"",rail:"Arr: Tianjin (prev night); Dep: Tianjin → Beijing (eve)",factory:"bjny",locs:["tianjin","beijing"],
-  steps:[["ft","Full day","Beijing NY Tianjin facility visit","Julie's pickup at Tianjin HSR station"],["tf","Evening","Tianjin → Beijing","~30 min HSR"],["ht","Evening","Check in — Beijing",""]]},
- {id:11,date:"Aug 12",iso:"2026-08-12",dow:"Wednesday",type:"heavy",city:"Hengshui → Beijing",next:"Beijing",title:"Jiadun — Electric Hospital Bed",summary:"Beijing↔Hengshui day-trip + fly home. Heavy day.",
-  travellers:1,checkin:"Beijing",checkout:"",flight:"Evening flight home from Beijing — details pending",rail:"Hengshui Station (D-train ~2h) or Jayda's Beijing pickup",factory:"jiadun",locs:["beijing","hengshui"],
-  steps:[["tf","Morning","Beijing → Hengshui","~2h · Jayda pickup from Beijing"],["ft","Midday","Jiadun factory visit","Contact: Jayda Wang"],["tf","Afternoon","Return to Beijing","~2h"],["fl","Evening","Fly home from Beijing","⚠ Needs a late-evening departure — details pending"]]},
- {id:12,date:"Aug 13",iso:"2026-08-13",dow:"Thursday",type:"travel",city:"Beijing → home",next:"—",title:"Rest / fly home",summary:"Beijing rest day and flight home.",
-  travellers:1,checkin:"Beijing",checkout:"Beijing",flight:"Fly home from Beijing — final details pending",rail:"",factory:null,locs:["beijing"],
-  steps:[["rest","Day","Rest in Beijing",""],["fl","—","Fly home","Final flight details pending"]]},
+ {id:1,date:"Aug 2",iso:"2026-08-02",dow:"Sunday",type:"travel",city:"Da Nang → Xiamen",next:"Xiamen",title:"Fly to China",summary:"Da Nang → Xiamen via Hanoi. Overnight Xiamen.",
+  travellers:2,checkin:"Wyndham Xiamen",checkout:"Da Nang",
+  flight:"VN166 · Da Nang (DAD) 11:35 → Hanoi (HAN) 13:00  ·  conf AKJGYP\nMF860 · Hanoi (HAN) 15:40 → Xiamen (XMN) 18:45  ·  conf NWKWX7",
+  rail:"",factory:null,locs:["danang","hanoi","xmn","xiamen"],
+  hotel:{name:"Wyndham Grand Plaza Royale Xiamen",conf:"6923.017.807",loc:"xiamen"},
+  steps:[["fl","11:35 AM","VN166 · Da Nang → Hanoi","conf AKJGYP · terminal change in Hanoi"],["fl","3:40 PM","MF860 · Hanoi → Xiamen","conf NWKWX7 · lands 6:45 PM · carry-on max 5kg"],["ht","Evening","Check in — Wyndham Xiamen","conf 6923.017.807 · Wuyuan Bay"]]},
+ {id:2,date:"Aug 3",iso:"2026-08-03",dow:"Monday",type:"factory",city:"Quanzhou, Fujian",next:"Ganzhou",title:"Naturalife — Gingerbread House",summary:"Xiamen → Quanzhou factory, then D6575 to Ganzhou.",
+  travellers:2,checkin:"Crowne Plaza Ganzhou",checkout:"Wyndham Xiamen",flight:"",
+  rail:"D6575 · Quanzhou 15:44 → Ganzhou 19:39  ·  BOOKED (Car 08, seats 05D/05F)",factory:"naturalife",locs:["xiamen","quanzhou","quanzhouSt","ganzhouSt","ganzhouHotel"],
+  hotel:{name:"Crowne Plaza Ganzhou Qili Ancient Town",conf:"164940",loc:"ganzhouHotel"},
+  steps:[["tf","8:30 AM","Ivy's car: Wyndham → Quanzhou factory","~50 min · SUV for luggage"],["ft","10:15 AM","Naturalife visit: tour, PPT, QC, lunch","Team of 4 hosting · no heavy dairy"],["tf","2:10 PM","Drop at Quanzhou Railway Station",""],["tf","3:44 PM","D6575 → Ganzhou","Car 08, seats 05D (aisle) / 05F (window) · arrives 7:39 PM"],["ht","7:39 PM","Frances's car meets at Ganzhou Station → Crowne Plaza","She + boss greet him · conf 164940"]]},
+ {id:3,date:"Aug 4",iso:"2026-08-04",dow:"Tuesday",type:"factory",city:"Ganzhou, Jiangxi",next:"Shanghai",title:"Olivee — Pimple Patches",summary:"Olivee Ganzhou factory, then evening flight to Shanghai.",
+  travellers:2,checkin:"Andaz Xintiandi Shanghai",checkout:"Crowne Plaza Ganzhou",
+  flight:"MU2993 · Ganzhou (KOW) 21:15 → Shanghai Hongqiao (SHA) 22:55  ·  conf PKY12W · seats 34K/34L",
+  rail:"",factory:"olivee",locs:["ganzhou","kow","shanghai"],
+  hotel:{name:"Andaz Xintiandi Shanghai",conf:"6997.256.140",loc:"shanghai"},
+  steps:[["tf","11:00 AM","Checkout · Olivee car to factory",""],["ft","Day","Olivee factory visit","Frances hosting · no heavy dairy"],["fl","by 8:00 PM","Car drops at Ganzhou Huangjin Airport (KOW)","for the 9:15 PM flight"],["fl","9:15 PM","MU2993 · Ganzhou → Shanghai","conf PKY12W · seats 34K/34L · lands 10:55 PM"],["ht","after midnight","Check in — Andaz Xintiandi","conf 6997.256.140 · late arrival flagged"]]},
+ {id:4,date:"Aug 5",iso:"2026-08-05",dow:"Wednesday",type:"rest",city:"Shanghai",next:"Shanghai",title:"Free day — Shanghai",summary:"Rest day with Kathleen. No factory visit.",
+  travellers:2,checkin:"Andaz Xintiandi Shanghai",checkout:"",flight:"",rail:"",factory:null,locs:["shanghai"],
+  hotel:{name:"Andaz Xintiandi Shanghai",conf:"6997.256.140",loc:"shanghai"},
+  steps:[["rest","All day","Free day in Shanghai","Xintiandi, the Bund — Kathleen's last full day before flying home"]]},
+ {id:5,date:"Aug 6",iso:"2026-08-06",dow:"Thursday",type:"factory",city:"Hangzhou Bay → Shaoxing",next:"Shaoxing",title:"Carelife — Pen Needles",summary:"Kathleen flies home. Carelife factory, then to Shaoxing.",
+  travellers:1,kath:true,checkin:"Le Meridien Shaoxing",checkout:"Andaz Xintiandi Shanghai",
+  flight:"Kathleen: MU583 · Shanghai (PVG) 1:10 PM → LAX  ·  conf MTMW7F, seat 43L\nthen DL1287 · LAX 6:30 PM → Houston (IAH) 11:54 PM · conf GUZNDC",
+  rail:"",factory:"carelife",locs:["shanghai","pvg","caremed","shaoxingHotel"],
+  hotel:{name:"Le Meridien Shaoxing Yukun",conf:"98311440",loc:"shaoxingHotel"},
+  steps:[["tf","9:00 AM","Qian's car: Andaz → PVG (drop Kathleen) → factory",""],["fl","1:10 PM","Kathleen flies home from PVG","MU583 · ABT solo from here"],["ft","Midday","Carelife pen-needle factory","Hangzhou Bay · no heavy dairy"],["ht","Evening","Qian's car → Le Meridien Shaoxing","conf 98311440 · check in via conf# (booked under 张怀明)"]]},
+ {id:6,date:"Aug 7",iso:"2026-08-07",dow:"Friday",type:"factory",city:"Shaoxing, Zhejiang",next:"Nanjing",title:"Bamboo Crafts — Bed Mattress",summary:"Bamboo Crafts factory, then G7482 to Nanjing.",
+  travellers:1,checkin:"Suning Zhongshan Golf Nanjing",checkout:"Le Meridien Shaoxing",flight:"",
+  rail:"G7482 · Shaoxing North 18:23 → Nanjing South 19:58  ·  (Alice booking)",factory:"bamboo",locs:["shaoxingHotel","shaoxing","shaoxingN","nanjingHotel"],
+  hotel:{name:"Suning Zhongshan Golf Resort Nanjing",conf:"687282",loc:"nanjingHotel"},
+  steps:[["tf","10:30 AM","Alice's car from Le Meridien → factory",""],["ft","Day","Bamboo Crafts visit + lunch","Sightseeing: Lu Xun Native Place · no heavy dairy"],["tf","6:23 PM","G7482 Shaoxing North → Nanjing South","arrives 7:58 PM"],["ht","8:00 PM","Shirley meets at Nanjing South → Suning","conf 687282 · company-paid"]]},
+ {id:7,date:"Aug 8",iso:"2026-08-08",dow:"Saturday",type:"factory",city:"Yizheng, Jiangsu",next:"Nanjing",title:"Meson Medical — Pimple Patches",summary:"Day-trip from Nanjing to Meson (Yizheng). Saturday line running.",
+  travellers:1,checkin:"Suning Zhongshan Golf Nanjing",checkout:"",flight:"",
+  rail:"Eva's car door-to-door from Nanjing (~1.5h)",factory:"meson",locs:["nanjingHotel","yizheng"],
+  hotel:{name:"Suning Zhongshan Golf Resort Nanjing",conf:"687282",loc:"nanjingHotel"},
+  steps:[["tf","10:30 AM","Eva's car from Suning hotel","~1.5h to Yizheng"],["ft","12:00 PM","Lunch → factory 1–4 PM → sightseeing","Saturday line running specially · ~40°C · no heavy dairy"],["tf","~9:30 PM","Back at Nanjing hotel","after dinner"]]},
+ {id:8,date:"Aug 9",iso:"2026-08-09",dow:"Sunday",type:"rest",city:"Nanjing",next:"Nanjing",title:"Rest day — Nanjing",summary:"Rest day. City tour with Shirley.",
+  travellers:1,checkin:"Suning Zhongshan Golf Nanjing",checkout:"",flight:"",rail:"",factory:null,locs:["nanjingHotel"],
+  hotel:{name:"Suning Zhongshan Golf Resort Nanjing",conf:"687282",loc:"nanjingHotel"},
+  steps:[["rest","Day","Shirley's Nanjing tour","Niushou Mtn, Jinling Town, Sun Yat-sen Mausoleum, Yuejiang Tower, Qinhuai River boat"]]},
+ {id:9,date:"Aug 10",iso:"2026-08-10",dow:"Monday",type:"factory",city:"Nanjing, Jiangsu",next:"Tianjin",title:"J Sun Healthcare — Acne Patches",summary:"J Sun factory, then G802 to Tianjin.",
+  travellers:1,checkin:"Hampton by Hilton Tianjin",checkout:"Suning Zhongshan Golf Nanjing",flight:"",
+  rail:"G802 · Nanjing 17:25 → Tianjin 21:25  ·  (Shirley booking)",factory:"jsun",locs:["nanjingHotel","nanjing","nanjingS","tianjinHotel"],
+  hotel:{name:"Hampton by Hilton Tianjin Jinnan",conf:"F2607140018",loc:"tianjinHotel"},
+  steps:[["tf","11:00 AM","Checkout · factory visit with Shirley",""],["ft","Day","J Sun Healthcare factory","Shirley accompanies · no heavy dairy"],["tf","4:45 PM","To Nanjing South for 5:25 PM train",""],["tf","5:25 PM","G802 Nanjing → Tianjin","arrives 9:25 PM · Julie meets at station"],["ht","9:25 PM","Julie → Hampton by Hilton Tianjin","conf F2607140018 · passport at check-in"]]},
+ {id:10,date:"Aug 11",iso:"2026-08-11",dow:"Tuesday",type:"factory",city:"Tianjin (Jinnan)",next:"Hengshui",title:"Beijing NY — Tianjin facility",summary:"Tianjin facility + sightseeing, then Jayda's car to Hengshui.",
+  travellers:1,checkin:"Home2 Suites Hengshui",checkout:"Hampton by Hilton Tianjin",flight:"",
+  rail:"Aug 11 eve: Jayda's car collects in Tianjin city centre → Hengshui (~3–4h)",factory:"bjny",locs:["tianjin","fiveAve","hengshuiHotel"],
+  hotel:{name:"Home2 Suites by Hilton Hengshui",conf:"1128149296739353",loc:"hengshuiHotel"},
+  steps:[["ft","Morning","Beijing NY facility visit","Julie hosting · no heavy dairy"],["tf","Lunch","Local lunch → sightseeing",""],["tf","Afternoon","Five Grand Avenues & Porcelain House",""],["tf","6:30–7:30 PM","Jayda's car collects in city centre → Hengshui","~3–4h drive · arrives 10:30–11:30 PM"],["ht","Late","Home2 Suites Hengshui","conf 1128149296739353 · paid by Jayda"]]},
+ {id:11,date:"Aug 12",iso:"2026-08-12",dow:"Wednesday",type:"factory",city:"Hengshui → Beijing",next:"Beijing",title:"Jiadun — Electric Hospital Bed",summary:"Relaxed Hengshui factory day, then drive to Beijing.",
+  travellers:1,checkin:"Beijing (to be booked)",checkout:"Home2 Suites Hengshui",flight:"",
+  rail:"Jayda's car: Hengshui → Beijing (evening, ~3–4h)",factory:"jiadun",locs:["hengshuiHotel","hengshui","beijing"],
+  hotel:{name:"Beijing hotel",conf:"TO BE BOOKED",loc:"beijing",pending:true},
+  steps:[["ft","Daytime","Jiadun factory visit","Relaxed full day · Jayda hosting · no heavy dairy"],["tf","Evening","Jayda's car → Beijing","~3–4h · late arrival fine (no meetings)"],["ht","Late","Check in — Beijing","⚠ hotel to be booked"]]},
+ {id:12,date:"Aug 13",iso:"2026-08-13",dow:"Thursday",type:"travel",city:"Beijing → home",next:"—",title:"Fly home",summary:"Fly home from Beijing.",
+  travellers:1,checkin:"",checkout:"Beijing",
+  flight:"Beijing → USA — TO BE BOOKED",rail:"",factory:null,locs:["beijing"],
+  hotel:null,
+  steps:[["rest","Morning","Relaxed morning / checkout",""],["fl","—","Fly home from Beijing","⚠ flight to be booked"]]},
 ];
 
+/* ============ ALERTS ============ */
 const ALERTS=[
- {sev:"crit",t:"Flight times needed to finalize suppliers",d:"Ivy, Frances, Julie & Jayda are waiting on ABT's rail/flight times to lock hotels and pickups. Booking the trains is the gating task.",day:2},
- {sev:"crit",t:"Aug 6 — two Carelife factories are 270 km apart",d:"Pen needles = Hangzhou Bay (Ningbo). Insulin syringes = Wenzhou, ~3–3.5h away. They cannot be visited the same day. A separate Wenzhou visit (Aug 7) was offered.",day:5},
- {sev:"confirm",t:"Aug 8 — confirm Saturday operation (Meson)",d:"Eva's visit lands on a Saturday. Confirm the production line is running, or the day reverts. Eva is also flexible Aug 5 or 10.",day:7},
- {sev:"confirm",t:"Ganzhou → Shanghai flight is a suggestion",d:"The KOW→SHA 9:15 PM China Eastern option is a suggested routing, not a confirmed booking.",day:3},
- {sev:"caution",t:"Aug 12 — heavy day",d:"Beijing↔Hengshui day-trip (~4h round) plus the flight home. Works only with a late-evening departure, otherwise add a buffer day.",day:11},
- {sev:"confirm",t:"Final Beijing flight home — pending",d:"The Aug 12/13 departure from Beijing isn't booked yet.",day:11},
- {sev:"note",t:"Moved visits reconfirmed",d:"Eva moved to Aug 8 and Shirley to Aug 10 from their original dates. Shirley's Aug 10 is locked; she leaves China Aug 15.",day:9},
- {sev:"note",t:"Yangzhou heat",d:"Yangzhou (and much of the route) can hit ~40°C / 104°F in August. Pack light, breathable clothing; hydrate.",day:7},
+ {sev:"crit",t:"Beijing hotel not booked (Aug 12 night)",d:"He arrives Beijing late Aug 12 after Hengshui and flies home Aug 13. A hotel for the Aug 12 night still needs booking.",day:11},
+ {sev:"crit",t:"Flight home not booked (Aug 13)",d:"Beijing → USA on Aug 13. This is the last major booking outstanding.",day:12},
+ {sev:"confirm",t:"Two trains still to be booked",d:"G7482 (Aug 7, Alice booking) and G802 (Aug 10, Shirley booking). Both open ~15 days ahead. Send Anthony's passport to each.",day:6},
+ {sev:"confirm",t:"Reimburse suppliers via WeChat Pay",d:"Alice ¥706.95 (Shaoxing hotel) and Frances ¥578 (D6575 train). Set up WeChat Pay before/early in the trip.",day:5},
+ {sev:"caution",t:"VPN — install before entering China (Aug 2)",d:"Google, ClickUp, Asana are blocked. Install ExpressVPN + Eva's Shadowrocket + Julie's iOS VPN BEFORE Aug 2 — downloading inside China is the hard part.",day:1},
+ {sev:"note",t:"Carry physical passports for trains",d:"China rail ties tickets to passport. Board with the physical passport matching the booking.",day:2},
+ {sev:"note",t:"Aug 6 — Kathleen flies home",d:"From Aug 6 onward it's ABT solo (1 guest / 1 room). Kathleen departs PVG 1:10 PM.",day:5},
+ {sev:"note",t:"Insulin syringes & wipes → October",d:"Carelife's Wenzhou insulin-syringe factory and Eva's Shandong wipes factory are too far to combine this trip — planned for October.",day:5},
 ];
+
+/* ============ PREP CHECKLIST ============ */
+const PREP=[
+ {t:"Install VPNs before Aug 2",d:"ExpressVPN (own) + Eva's Shadowrocket (iPhone) + Julie's iOS VPN. Test all before entering China.",done:false},
+ {t:"Carry both physical passports",d:"Required to board every train (tickets tied to passport).",done:false},
+ {t:"Set up WeChat Pay",d:"To reimburse Alice ¥706.95 + Frances ¥578, and for incidentals.",done:false},
+ {t:"Pack light / breathable clothing",d:"Yizheng & much of the route ~40°C in August. Bring an umbrella for Ganzhou (thundershowers).",done:false},
+ {t:"No heavy dairy — noted to all hosts",d:"Ivy, Frances, Qian, Alice, Eva, Shirley, Julie, Jayda all informed.",done:true},
+ {t:"Keep the Aug 2 backpack light",d:"Xiamen Airlines carry-on limit is 5 kg on MF860.",done:false},
+];
+
+/* ============ REIMBURSEMENTS ============ */
+const REIMB=[
+ {who:"Alice Zhang",amt:"¥706.95",for:"Le Meridien Shaoxing hotel",via:"WeChat Pay"},
+ {who:"Frances",amt:"¥578",for:"D6575 train (2 × ¥289)",via:"WeChat Pay"},
+];
+
+
+/* ============ HOTELS (full booking records) ============ */
+const HOTELS = {
+  wyndham:{ name:"Wyndham Grand Plaza Royale Yuzhou Xiamen Wuyuan Bay", city:"Xiamen", nights:"Aug 2 → Aug 3", loc:"xiamen",
+    conf:"6923.017.807", pin:"0822", bookedBy:"Ali (Booking.com)", nameOn:"Kathleen Zita", guests:"2 adults",
+    room:"Deluxe City View Suite · breakfast incl.", pay:"Pay at property (~US$149)", status:"booked",
+    addr:"No.882 Zhongzhai Road, Huli District, Xiamen 361015", tel:"+86 592 875 2222",
+    notes:"Free cancel until Aug 2 6PM. Arrival ~6:45 PM off MF860." },
+  crowne:{ name:"Crowne Plaza Ganzhou Qili Ancient Town", city:"Ganzhou", nights:"Aug 3 → Aug 4", loc:"ganzhouHotel",
+    conf:"164940", bookedBy:"Frances (Olivee)", nameOn:"Anthony Bui-Tran", guests:"2 adults",
+    room:"1 Senior Double Room · breakfast incl.", pay:"Pay at front desk (¥500/night)", status:"booked",
+    addr:"188 Qiandong Avenue, Shuidong Town, Zhanggong District, Ganzhou", tel:"0797-2138888",
+    notes:"Has gym. Frances's car meets him at Ganzhou Station 19:39. Inside Qili Ancient Town." },
+  andaz:{ name:"Andaz Xintiandi, Shanghai, By Hyatt", city:"Shanghai", nights:"Aug 4 → Aug 6 (2 nights)", loc:"shanghai",
+    conf:"6997.256.140", pin:"0089", bookedBy:"Ali (Booking.com)", nameOn:"Anthony Bui-Tran", guests:"2 adults",
+    room:"King Room · breakfast incl.", pay:"Pay at property (US$482 total)", status:"booked",
+    addr:"No.88 Songshan Road, Huangpu District, Shanghai 200021", tel:"+86 21 2310 1234",
+    notes:"Late arrival (after midnight Aug 4) flagged. Free cancel until Aug 3 23:59. Passport at check-in." },
+  meridien:{ name:"Le Meridien Shaoxing Yukun", city:"Shaoxing", nights:"Aug 6 → Aug 7", loc:"shaoxingHotel",
+    conf:"98311440", bookedBy:"Alice (Bamboo Crafts) — paid ¥706.95", nameOn:"Booked under 张怀明 (Zhang Huaiming)", guests:"1 guest",
+    room:"Premium King (2×2m) · breakfast incl.", pay:"Alice paid — REIMBURSE ¥706.95 via WeChat Pay", status:"booked",
+    addr:"No.688 Yinxing Rd, Gaobu Town, Yuecheng District, Shaoxing", tel:"18621132293",
+    notes:"⚠ Check in using confirmation number 98311440 (booking is under 张怀明). Room held all night. Alice picks up 10:30 AM Aug 7." },
+  suning:{ name:"Suning Zhongshan Golf Resort", city:"Nanjing", nights:"Aug 7 → Aug 10 (3 nights)", loc:"nanjingHotel",
+    conf:"687282", bookedBy:"Shirley (J Sun) — company paid", nameOn:"Anthony Bui-Tran", guests:"1 guest",
+    room:"Golf View King Bed Room · breakfast incl.", pay:"Company-paid by Shirley's company", status:"booked",
+    addr:"No.9 Huanling Road, Xuanwu District, Nanjing", tel:"+86 25 8540 8888",
+    notes:"Shirley meets him at Nanjing South ~8 PM Aug 7 & accompanies check-in. Arrival after 6 PM — she'll hold the room." },
+  hampton:{ name:"Hampton by Hilton Tianjin Haihe Education Park NCEC", city:"Tianjin", nights:"Aug 10 → Aug 11", loc:"tianjinHotel",
+    conf:"F2607140018", bookedBy:"Julie/CJ (Beijing NY)", nameOn:"Anthony Bui Tran", guests:"1 guest",
+    room:"King Bed Hampton Suite · 2 breakfasts", pay:"No prepayment — check in directly (CNY 794)", status:"booked",
+    addr:"Building 47, Jincaiyuan, Yarun Rd × Jinnan Ring Rd, Xianshuigu Town, Jinnan District, Tianjin", tel:"022-2852 5999",
+    notes:"⚠ Passport required at check-in. Julie meets him at Tianjin Station ~9:25 PM Aug 10." },
+  home2:{ name:"Home2 Suites by Hilton Hengshui Taocheng", city:"Hengshui", nights:"Aug 11 → Aug 12", loc:"hengshuiHotel",
+    conf:"1128149296739353", bookedBy:"Jayda (Jiadun) — company paid", nameOn:"Mr. Bui-Tran (shown as 'Bui/Tran')", guests:"1 guest",
+    room:"1 Queen bed (king requested) · breakfast incl.", pay:"Prepaid & paid by Jayda (CNY 382)", status:"booked",
+    addr:"Building S5, No.1308 Yucai South Street, Taocheng District, Hengshui, Hebei", tel:"0318-2366666",
+    notes:"Check in via confirmation number if name doesn't match passport. Free cancel until 11:59 PM Aug 11." },
+  bjhotel:{ name:"Beijing hotel", city:"Beijing", nights:"Aug 12 → Aug 13", loc:"beijing",
+    conf:"TO BE BOOKED", bookedBy:"—", nameOn:"Anthony Bui-Tran", guests:"1 guest",
+    room:"King, gym, near airport", pay:"—", status:"pending",
+    addr:"To be booked", tel:"",
+    notes:"⚠ NOT YET BOOKED. He arrives Beijing late Aug 12 (Jayda's drive) and flies home Aug 13." },
+};
+// map each day to its hotel key
+const DAYHOTEL={1:"wyndham",2:"crowne",3:"andaz",4:"andaz",5:"meridien",6:"suning",7:"suning",8:"suning",9:"hampton",10:"home2",11:"bjhotel",12:null};
 
 /* ============ HELPERS ============ */
 const $=s=>document.querySelector(s);
 const el=(t,c,h)=>{const e=document.createElement(t);if(c)e.className=c;if(h!=null)e.innerHTML=h;return e;};
 const gmaps=a=>`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(a)}`;
-const gmapsLL=(ll,n)=>`https://www.google.com/maps/search/?api=1&query=${ll[0]},${ll[1]}`;
-const badge=t=>{const m={confirmed:["b-confirmed","Confirmed"],confirm:["b-confirm","Confirm needed"],travel:["b-travel","Travel day"],rest:["b-rest","Rest day"],heavy:["b-heavy","Heavy day"],factory:["b-confirmed","Confirmed"]};const x=m[t]||m.travel;return `<span class="badge ${x[0]}"><span class="dotb"></span>${x[1]}</span>`;};
+const gmapsLL=ll=>`https://www.google.com/maps/search/?api=1&query=${ll[0]},${ll[1]}`;
+const esc=s=>(s||"").replace(/'/g,"\\'");
+const badge=t=>{const m={confirmed:["b-confirmed","Confirmed"],confirm:["b-confirm","Confirm needed"],travel:["b-travel","Travel day"],rest:["b-rest","Rest day"],heavy:["b-heavy","Heavy day"],booked:["b-booked","Booked"],pending:["b-pending","To book"]};const x=m[t]||m.travel;return `<span class="badge ${x[0]}"><span class="dotb"></span>${x[1]}</span>`;};
 function toast(msg){let t=$("#toast");if(!t){t=el("div");t.id="toast";t.style.cssText="position:fixed;bottom:96px;left:50%;transform:translateX(-50%);background:var(--ink);color:#fff;padding:10px 16px;border-radius:20px;font-size:13px;z-index:3000;box-shadow:var(--shadow);transition:opacity .3s";document.body.appendChild(t);}t.textContent=msg;t.style.opacity="1";clearTimeout(t._t);t._t=setTimeout(()=>t.style.opacity="0",1600);}
 function copy(txt){navigator.clipboard?.writeText(txt).then(()=>toast("Copied")).catch(()=>toast("Copy failed"));}
 const stepIcon={tf:"🚄",fl:"✈️",ft:"🏭",ht:"🛏️",rest:"☕",ml:"🍽️"};
 const stepCls={tf:"tf",fl:"fl",ft:"ft",ht:"ht",rest:"tf",ml:""};
 
-/* Active day detection (China time) */
 function chinaNow(){return new Date(new Date().toLocaleString("en-US",{timeZone:"Asia/Shanghai"}));}
 function activeDayIdx(){
   const n=chinaNow();const t=n.getFullYear()+"-"+String(n.getMonth()+1).padStart(2,"0")+"-"+String(n.getDate()).padStart(2,"0");
@@ -437,13 +518,11 @@ function contactActions(cid,pri){
 }
 function renderToday(){
   const d=DAYS[selIdx],v=$("#v-today");v.innerHTML="";
-  // day nav
   const dn=el("div","daynav");
   dn.innerHTML=`<button ${selIdx===0?"disabled style=opacity:.35":""} onclick="stepDay(-1)">‹</button>
     <div class="lbl">Day ${d.id} · ${d.dow}<small>${d.date}, 2026</small></div>
     <button ${selIdx===DAYS.length-1?"disabled style=opacity:.35":""} onclick="stepDay(1)">›</button>`;
   v.appendChild(dn);
-  // hero
   const hero=el("div","card hero");
   const f=d.factory?FACTORIES[d.factory]:null;
   hero.innerHTML=`<div class="pad">
@@ -455,7 +534,6 @@ function renderToday(){
     <div style="margin-top:12px">${badge(f?f.status:d.type)}</div>
   </div>`;
   v.appendChild(hero);
-  // plan steps
   const plan=el("div","card pad");plan.style.marginTop="12px";
   plan.innerHTML='<div class="eyebrow">Plan for the day</div><div class="steps"></div>';
   const steps=plan.querySelector(".steps");
@@ -466,7 +544,6 @@ function renderToday(){
     steps.appendChild(st);
   });
   v.appendChild(plan);
-  // transport
   if(d.flight||d.rail){
     const tr=el("div","card pad");tr.style.marginTop="12px";
     let h='<div class="eyebrow">Transport</div>';
@@ -476,30 +553,29 @@ function renderToday(){
     if(d.checkin)h+=`<div class="irow"><div class="k">Sleep</div><div class="v">${d.checkin}</div></div>`;
     tr.innerHTML=h;v.appendChild(tr);
   }
-  // factory card
   if(f){
+    const addr=LOC[f.loc]?.addr||f.city;
     const fc=el("div","card pad");fc.style.marginTop="12px";
     fc.innerHTML=`<div class="eyebrow">Factory visit</div>
       <div style="font-family:'Space Grotesk';font-weight:600;font-size:16px;margin-top:6px">${f.co}</div>
       <div class="tiny" style="margin-top:2px">${CONTACTS[f.contact].name} · ${f.city}</div>
-      <div class="irow" style="margin-top:8px"><div class="k">Factory</div><div class="v">${f.loc&&LOC[f.loc]?LOC[f.loc].addr||f.city:f.city}
-        <div class="acts"><button class="act-btn" onclick="copy('${(LOC[f.loc]?.addr||f.city).replace(/'/g,"\\'")}')">Copy</button><a class="act-btn" target="_blank" href="${gmaps(LOC[f.loc]?.addr||f.city)}">Open in Maps</a></div></div></div>
-      <div class="irow"><div class="k">Pickup</div><div class="v">${f.car}</div></div>
+      <div class="irow" style="margin-top:8px"><div class="k">Factory</div><div class="v">${addr}
+        <div class="acts"><button class="act-btn" onclick="copy('${esc(addr)}')">Copy</button><a class="act-btn" target="_blank" href="${gmaps(addr)}">Open in Maps</a></div></div></div>
+      <div class="irow"><div class="k">Transport</div><div class="v">${f.car}</div></div>
       <div class="irow"><div class="k">Discuss</div><div class="v">${f.discuss}</div></div>
       ${contactActions(f.contact,true)}`;
     v.appendChild(fc);
   }
-  // hotel tonight
-  const ht=el("div","card pad");ht.style.marginTop="12px";
-  ht.innerHTML=`<div class="eyebrow">Tonight</div><div class="irow" style="margin-top:6px"><div class="k">Hotel</div><div class="v">${f?f.hotel:(d.checkin?('Overnight — '+d.checkin):'—')}</div></div>`;
-  v.appendChild(ht);
-  // day alerts
+  const hk=DAYHOTEL[d.id];
+  if(hk&&HOTELS[hk]){
+    v.appendChild(el("div","slab","Tonight's hotel"));
+    v.appendChild(hotelCard(HOTELS[hk]));
+  }
   const dayAlerts=ALERTS.filter(a=>a.day===d.id);
   if(dayAlerts.length){
-    v.appendChild(el("div","slab","Needs attention today"));
+    v.appendChild(el("div","slab","Needs attention"));
     dayAlerts.forEach(a=>v.appendChild(alertEl(a)));
   }
-  // tomorrow
   if(selIdx<DAYS.length-1){
     const t=DAYS[selIdx+1];
     const tm=el("button","card pad");tm.style.cssText="margin-top:12px;width:100%;text-align:left;display:block";
@@ -515,6 +591,34 @@ function renderToday(){
 function stepDay(n){selIdx=Math.max(0,Math.min(DAYS.length-1,selIdx+n));renderToday();updHeader();window.scrollTo({top:0,behavior:"smooth"});}
 function goToday(){selIdx=activeDayIdx();switchView("today");renderToday();updHeader();window.scrollTo(0,0);}
 function updTodayBtn(){$("#todayBtn").classList.toggle("show",selIdx!==activeDayIdx());}
+
+
+/* ============ HOTEL CARD (full booking record) ============ */
+function hotelCard(h){
+  const c=el("div","card pad");
+  const gmapLink=h.addr&&h.addr!=="To be booked"?`<a class="act-btn" target="_blank" href="${gmaps(h.addr)}">Open in Maps</a>`:"";
+  const telLink=h.tel?`<a class="act-btn call" href="tel:${h.tel.replace(/[^0-9+]/g,'')}">Call hotel</a>`:"";
+  const row=(k,val)=>val?`<div class="irow"><div class="k">${k}</div><div class="v">${val}</div></div>`:"";
+  c.innerHTML=`
+    <div style="display:flex;justify-content:space-between;align-items:flex-start;gap:10px">
+      <div style="font-family:'Space Grotesk';font-weight:600;font-size:15.5px;line-height:1.25">${h.name}</div>
+      ${badge(h.status)}
+    </div>
+    <div class="tiny" style="margin-top:3px">${h.city} · ${h.nights}</div>
+    <div style="margin-top:10px">
+      ${row("Conf #",h.status==='pending'?'<span class="pending">TO BE BOOKED</span>':`<span class="conf">${h.conf}</span>${h.pin?' · PIN '+h.pin:''}`)}
+      ${row("Booked by",h.bookedBy)}
+      ${row("Name on",h.nameOn)}
+      ${row("Guests",h.guests)}
+      ${row("Room",h.room)}
+      ${row("Payment",h.pay)}
+      ${row("Address",h.addr)}
+      ${row("Phone",h.tel)}
+      ${row("Notes",h.notes)}
+    </div>
+    ${(gmapLink||telLink)?`<div class="acts">${gmapLink}${telLink}${h.addr&&h.addr!=="To be booked"?`<button class="act-btn" onclick="copy('${esc(h.addr)}')">Copy address</button>`:''}</div>`:''}`;
+  return c;
+}
 
 /* ============ TRIP ============ */
 function renderTrip(){
@@ -533,7 +637,7 @@ function renderTrip(){
           <div class="city">${d.city}</div>
           <div class="rt">${f?'🏭 '+f.disp:'• '+d.title}</div>
           ${f?`<div class="fp">${f.product}</div>`:''}
-          <div class="exp">tap to ${'expand ▾'}</div>
+          <div class="exp">tap to expand ▾</div>
         </div>
         <div class="rdetail">${tripDetail(d,f)}</div>
       </div>`;
@@ -549,27 +653,24 @@ function tripDetail(d,f){
   h+=row("Flight",d.flight);
   h+=row("Rail",d.rail);
   h+=row("Check out",d.checkout);
-  h+=row("Check in",d.checkin);
+  h+=row("Sleep",d.checkin);
+  if(d.hotel)h+=row("Hotel",d.hotel.name+(d.hotel.pending?' (to book)':(d.hotel.conf?` · <span class="conf">${d.hotel.conf}</span>`:'')));
   if(f){
     h+=row("Company",f.co);
     h+=row("Contact",CONTACTS[f.contact].name+" · "+CONTACTS[f.contact].role);
-    h+=row("Office",f.office);
     h+=row("Factory",(LOC[f.loc]?.addr)||f.city);
-    h+=row("Hotel",f.hotel);
-    h+=row("Car",f.car);
+    h+=row("Transport",f.car);
     h+=row("Discuss",f.discuss);
-    h+=row("Remarks",f.remarks);
+    h+=row("Notes",f.remarks);
     h+=`<div class="acts">
       <a class="act-btn" target="_blank" href="${gmaps((LOC[f.loc]?.addr)||f.city)}">Open in Maps</a>
       <a class="act-btn wa" target="_blank" href="https://wa.me/${CONTACTS[f.contact].wa}">WhatsApp</a>
-      <a class="act-btn call" href="tel:${CONTACTS[f.contact].phone.replace(/\s/g,'')}">Call</a>
-      <a class="act-btn" href="mailto:${CONTACTS[f.contact].email}">Email</a></div>`;
-  } else { h+=row("Remarks", d.type==='rest'?'Rest day':''); }
+      <a class="act-btn call" href="tel:${CONTACTS[f.contact].phone.replace(/\s/g,'')}">Call</a></div>`;
+  }
   h+=`</div>`;return h;
 }
 
 /* ============ FACTORIES ============ */
-let facFilter="all";
 function renderFac(){
   const v=$("#v-fac");v.innerHTML="";
   v.appendChild(el("div","vhead","<h2>Factories</h2><span class='sub'>8 visits · by date</span>"));
@@ -584,22 +685,21 @@ function drawFac(q){
     const c=CONTACTS[f.contact];
     const hay=(f.co+f.disp+f.product+f.city+c.name).toLowerCase();
     if(q&&!hay.includes(q))return;
+    const addr=(LOC[f.loc]?.addr)||f.city;
     const card=el("div","card fcard");
     card.innerHTML=`<div class="pad">
       <div class="ftop"><div><div class="co">${f.co}</div><div class="meta">${f.date} · ${f.city}</div></div>${badge(f.status)}</div>
       <div class="prod">${f.product}</div>
       <div class="who">👤 ${c.name} <span class="tiny">· ${c.role}</span></div>
-      <div class="irow" style="margin-top:10px"><div class="k">Factory</div><div class="v">${(LOC[f.loc]?.addr)||f.city}</div></div>
-      <div class="irow"><div class="k">Hotel</div><div class="v">${f.hotel}</div></div>
-      <div class="irow"><div class="k">Pickup</div><div class="v">${f.car}</div></div>
-      <div class="irow"><div class="k">Rail</div><div class="v">${f.rail}</div></div>
-      ${f.remarks?`<div class="irow"><div class="k">Remarks</div><div class="v">${f.remarks}</div></div>`:''}
+      <div class="irow" style="margin-top:10px"><div class="k">Factory</div><div class="v">${addr}</div></div>
+      <div class="irow"><div class="k">Transport</div><div class="v">${f.car}</div></div>
+      ${f.rail?`<div class="irow"><div class="k">Rail</div><div class="v">${f.rail}</div></div>`:''}
+      ${f.remarks?`<div class="irow"><div class="k">Notes</div><div class="v">${f.remarks}</div></div>`:''}
       <div class="acts">
-        <a class="act-btn pri" target="_blank" href="${gmaps((LOC[f.loc]?.addr)||f.city)}">Directions</a>
+        <a class="act-btn pri" target="_blank" href="${gmaps(addr)}">Directions</a>
         <a class="act-btn wa" target="_blank" href="https://wa.me/${c.wa}">WhatsApp</a>
         <a class="act-btn call" href="tel:${c.phone.replace(/\s/g,'')}">Call</a>
-        <a class="act-btn" href="mailto:${c.email}">Email</a>
-        <button class="act-btn" onclick="copy('${((LOC[f.loc]?.addr)||f.city).replace(/'/g,"\\'")}')">Copy address</button>
+        <button class="act-btn" onclick="copy('${esc(addr)}')">Copy address</button>
       </div></div>`;
     box.appendChild(card);
   });
@@ -611,19 +711,15 @@ function showFactoryOf(cid){
   if(entry)setTimeout(()=>{drawFac(FACTORIES[entry[0]].co.toLowerCase().split(' ')[0]);},50);
 }
 
-/* ============ CONTACTS ============ */
-function renderCon(){
-  const v=$("#v-con");v.innerHTML="";
-  v.appendChild(el("div","vhead","<h2>Contacts</h2><span class='sub'>8 suppliers</span>"));
-  const inp=el("input","search");inp.placeholder="Search contacts…";
-  inp.oninput=()=>drawCon(inp.value.toLowerCase());v.appendChild(inp);
-  const list=el("div","clist");list.id="conList";v.appendChild(list);
-  drawCon("");
-}
-function drawCon(q){
-  const list=$("#conList");list.innerHTML="";
+/* ============ INFO (contacts + practical + reimbursements + prep) ============ */
+function renderInfo(){
+  const v=$("#v-info");v.innerHTML="";
+  v.appendChild(el("div","vhead","<h2>Info</h2><span class='sub'>contacts · prep · payments</span>"));
+
+  // Contacts
+  v.appendChild(el("div","slab","Suppliers"));
+  const list=el("div","clist");
   Object.entries(CONTACTS).forEach(([id,c])=>{
-    if(q&&!(c.name+c.co+c.product).toLowerCase().includes(q))return;
     const row=el("div","card crow");
     const ini=c.name.split(/[ \/]/)[0][0]+(c.name.split(/[ \/]/)[1]?.[0]||"");
     row.innerHTML=`<div class="av">${ini}</div>
@@ -635,9 +731,70 @@ function drawCon(q){
       </div>`;
     list.appendChild(row);
   });
+  v.appendChild(list);
+
+  // All hotels (full booking records)
+  v.appendChild(el("div","slab","All hotel bookings"));
+  const seen=new Set();
+  Object.keys(DAYHOTEL).forEach(k=>{
+    const hk=DAYHOTEL[k];
+    if(hk&&!seen.has(hk)){seen.add(hk);v.appendChild(hotelCard(HOTELS[hk]));}
+  });
+
+  // Prep checklist
+  v.appendChild(el("div","slab","Pre-departure checklist"));
+  const prep=el("div","card pad infocard");
+  prep.innerHTML='<h3>Before Aug 2</h3><div class="tiny" style="margin-bottom:6px">Install & test everything before entering China</div>'+
+    PREP.map(p=>`<div class="chk ${p.done?'done':''}"><span class="cx">${p.done?'✅':'⬜'}</span><div><b>${p.t}</b><div class="tiny">${p.d}</div></div></div>`).join("");
+  v.appendChild(prep);
+
+  // Reimbursements
+  v.appendChild(el("div","slab","Reimbursements owed"));
+  const rb=el("div","card pad infocard");
+  rb.innerHTML='<h3>💰 To pay via WeChat Pay</h3>'+
+    REIMB.map(r=>`<div class="irow"><div class="k">${r.amt}</div><div class="v">${r.who}<br><small>${r.for} · ${r.via}</small></div></div>`).join("");
+  v.appendChild(rb);
+
+  // Practical notes
+  v.appendChild(el("div","slab","Good to know"));
+  const notes=el("div","card pad infocard");
+  notes.innerHTML=`<h3>🧳 Practical notes</h3>
+    <div class="irow"><div class="k">VPN</div><div class="v">Google, ClickUp, Asana blocked. ExpressVPN + Eva's Shadowrocket + Julie's iOS VPN — install before Aug 2.</div></div>
+    <div class="irow"><div class="k">Passport</div><div class="v">Carry physical passports for all trains + hotel check-ins.</div></div>
+    <div class="irow"><div class="k">Luggage</div><div class="v">Aug 2–6: 2 × 28" cases + 2 backpacks (SUV needed). From Aug 6: 1 case (Kathleen home).</div></div>
+    <div class="irow"><div class="k">Weather</div><div class="v">~40°C much of the route; thundershowers in Ganzhou. Light clothing + umbrella.</div></div>
+    <div class="irow"><div class="k">Diet</div><div class="v">No heavy dairy for Anthony — all hosts informed.</div></div>
+    <div class="irow"><div class="k">Shaoxing</div><div class="v">Le Meridien booked under 张怀明 — check in using confirmation number 98311440.</div></div>`;
+  v.appendChild(notes);
+
+  // Emergency & useful info
+  v.appendChild(el("div","slab","Emergency & useful info"));
+  const emg=el("div","card pad infocard");
+  emg.innerHTML=`<h3>🆘 In an emergency (China)</h3>
+    <div class="irow"><div class="k">Police</div><div class="v"><a href="tel:110" style="font-weight:600">110</a></div></div>
+    <div class="irow"><div class="k">Ambulance</div><div class="v"><a href="tel:120" style="font-weight:600">120</a></div></div>
+    <div class="irow"><div class="k">Fire</div><div class="v"><a href="tel:119" style="font-weight:600">119</a></div></div>
+    <div class="irow"><div class="k">Traffic</div><div class="v"><a href="tel:122" style="font-weight:600">122</a> (road accidents)</div></div>`;
+  v.appendChild(emg);
+
+  const emb=el("div","card pad infocard");
+  emb.innerHTML=`<h3>🇺🇸 U.S. citizen assistance</h3>
+    <div class="tiny" style="margin-bottom:6px">For lost passport, arrest, medical or other emergencies affecting a U.S. citizen.</div>
+    <div class="irow"><div class="k">24h Emergency</div><div class="v"><a href="tel:+861085314000" style="font-weight:600">+86 10 8531 4000</a><br><small>U.S. Embassy Beijing — all-China after-hours emergency line</small></div></div>
+    <div class="irow"><div class="k">Consulate Shanghai</div><div class="v"><a href="tel:+862180112400">+86 21 8011 2400</a><br><small>Covers Shanghai, Jiangsu, Zhejiang, Anhui (most of the factory route)<br>9/F Westgate Mall, 1038 West Nanjing Rd, Shanghai</small></div></div>
+    <div class="irow"><div class="k">Embassy Beijing</div><div class="v"><a href="tel:+861085313000">+86 10 8531 3000</a><br><small>55 An Jia Lou Road, Chaoyang District, Beijing 100600</small></div></div>`;
+  v.appendChild(emb);
+
+  const cary=el("div","alert al-caution");
+  cary.innerHTML=`<div class="ai">△</div><div class="at"><b>Carry your passport at all times</b>China requires foreign visitors to carry their passport as ID — needed for hotel check-in, train boarding, and police checks. Keep a photo/copy separately as backup.</div>`;
+  v.appendChild(cary);
+
+  // All alerts
+  v.appendChild(el("div","slab","All open items"));
+  ALERTS.forEach(a=>v.appendChild(alertEl(a)));
 }
 
-/* ============ ALERTS (shared) ============ */
+/* ============ ALERTS ============ */
 function alertEl(a){
   const icon={crit:"⚠",confirm:"◑",caution:"△",note:"ℹ"}[a.sev];
   const e=el("div","alert al-"+a.sev);
@@ -657,18 +814,14 @@ function initMap(){
   if(mapReady)return;mapReady=true;
   map=L.map('map',{scrollWheelZoom:false}).setView([31.5,117],5);
   L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',{maxZoom:18,attribution:'© OpenStreetMap'}).addTo(map);
-  buildMarkers();
-  drawRoute();
+  buildMarkers();drawRoute();
 }
 function buildMarkers(){
   Object.values(layers).forEach(l=>map.removeLayer(l));layers={};
-  // one marker per LOC, numbered by first appearance in route order
   const seq=[];DAYS.forEach(d=>d.locs.forEach(k=>{if(!seq.includes(k))seq.push(k);}));
-  const facSeq=Object.values(FACTORIES).map(f=>f.loc);
-  seq.forEach((k,i)=>{
+  seq.forEach((k)=>{
     const L0=LOC[k];if(!L0)return;
     let label=L0.t==='fac'?'🏭':(L0.t==='rail'?'🚉':(L0.t==='air'?'✈':(L0.t==='hotel'?'🛏':'●')));
-    // number factories in visit order
     const fi=Object.values(FACTORIES).findIndex(f=>f.loc===k);
     if(L0.t==='fac'&&fi>=0)label=(fi+1);
     const m=L.marker(L0.ll,{icon:mkIcon(label,L0.t)});
@@ -686,7 +839,7 @@ function popupHtml(k,L0){
     h+=`<a class="pb" target="_blank" href="${gmaps(L0.addr||L0.city)}">Open in Maps</a> `;
     h+=`<a class="pb" style="background:#0a7a3f" target="_blank" href="https://wa.me/${c.wa}">WhatsApp</a>`;
   } else {
-    h+=`<div class="pm">${L0.acc}</div><a class="pb" target="_blank" href="${gmapsLL(L0.ll)}">Open in Maps</a>`;
+    h+=`<div class="pm">${L0.acc}</div><a class="pb" target="_blank" href="${L0.addr?gmaps(L0.addr):gmapsLL(L0.ll)}">Open in Maps</a>`;
   }
   h+=`</div>`;return h;
 }
@@ -730,13 +883,14 @@ function switchView(name){
 }
 document.querySelectorAll("nav button").forEach(b=>b.onclick=()=>{
   const n=b.dataset.v;switchView(n);
-  if(n==="trip")renderTrip();if(n==="fac")renderFac();if(n==="con")renderCon();if(n==="today"){renderToday();}
+  if(n==="trip")renderTrip();if(n==="fac")renderFac();if(n==="info")renderInfo();if(n==="today"){renderToday();}
 });
 
 /* ============ INIT ============ */
 tickClock();setInterval(tickClock,1000*20);
 updHeader();renderToday();
 window.addEventListener("scroll",updTodayBtn);
+
 </script>
 </body>
 </html>
